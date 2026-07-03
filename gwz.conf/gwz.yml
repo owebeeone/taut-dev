@@ -32,29 +32,45 @@ members:
   source_id: src_taut_shape
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/taut-shape.git
+    fetch: true
+    push: true
 - id: mem_taut_shape_rs
   path: taut-shape-rs
   type: git
   source_id: src_taut_shape_rs
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/taut-shape-rs.git
+    fetch: true
+    push: true
 - id: mem_taut_shape_ts
   path: taut-shape-ts
   type: git
   source_id: src_taut_shape_ts
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/taut-shape-ts.git
+    fetch: true
+    push: true
 - id: mem_taut_shape_py
   path: taut-shape-py
   type: git
   source_id: src_taut_shape_py
   active: true
   desired:
-    local_only: true
-  remotes: []
+    branch: main
+  remotes:
+  - name: origin
+    url: git@github.com:owebeeone/taut-shape-py.git
+    fetch: true
+    push: true
