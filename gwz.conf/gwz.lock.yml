@@ -1,7 +1,7 @@
 schema: gwz.lock/v0
 workspace_id: ws_default
 manifest_schema: gwz.workspace/v0
-created_at: unix-ms:1782989962272
+created_at: unix-ms:1783096197722
 members:
   mem_glade:
     path: glade
@@ -25,7 +25,7 @@ members:
     path: taut-shape
     source_id: src_taut_shape
     source_kind: git
-    commit: 7aa206b720c5e0a2652bbacfe83f2aa0a2bf8c26
+    commit: 995ed919affc1b96867554d3fd76548762aa91b2
     branch: main
     detached: false
     dirty: false
@@ -34,7 +34,7 @@ members:
     path: taut-shape-py
     source_id: src_taut_shape_py
     source_kind: git
-    commit: dd0769a3cb0503d80b669c4941e90b7f59b66fe2
+    commit: b63f53a8efc1406da303101bd6e92943cae34612
     branch: main
     detached: false
     dirty: false
@@ -43,7 +43,7 @@ members:
     path: taut-shape-rs
     source_id: src_taut_shape_rs
     source_kind: git
-    commit: ad9afc54247184136f861016a4f97c724d49ef85
+    commit: d840c6c35823dd718af8ddd8d56af5f72647e320
     branch: main
     detached: false
     dirty: false
@@ -52,7 +52,7 @@ members:
     path: taut-shape-ts
     source_id: src_taut_shape_ts
     source_kind: git
-    commit: 08a82782f86dfc30085fc91e9f704e59a2088218
+    commit: f1a12e112f85e516c38059d8cf63742dbab3ed11
     branch: main
     detached: false
     dirty: false
