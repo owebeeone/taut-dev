@@ -1,6 +1,25 @@
-schema: gwz.lock/v0
+schema: gwz.marker/v0
+gwz_commit_id: 019f554e-04d4-7c6b-9784-cd0d3d9ecf75
 workspace_id: ws_default
-manifest_schema: gwz.workspace/v0
+origin_url_hash: sha256:435d0cc7fd90ecac21881555220213cf5fac02f6a8b1fd09cc8841c66275d58c
+created_at: unix-ms:1783842604290
+created_by:
+  actor_id: unknown
+root:
+  path: .
+  before_commit: 99773ed0a894dac8c7a74ebda568cdca57c30a20
+  branch: main
+selected_targets:
+- '@root'
+- mem_taut
+- mem_glade
+- mem_taut_shape
+- mem_taut_shape_rs
+- mem_taut_shape_ts
+- mem_taut_shape_py
+committed_targets:
+- mem_taut
+- '@root'
 members:
   mem_glade:
     path: glade
