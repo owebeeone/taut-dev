@@ -1,6 +1,6 @@
 # Taut Shape Catalogue — Independent Findings and Proposal Prompt
 
-Status: analysis commission for `TautShapeImplementationPlan.md` Step 0.1  
+Status: analysis commission for `TautShapeImplementationPlan.md` Step 0.1
 Purpose: produce multiple independent, decision-ready shape-catalogue proposals
 that can be compared and consolidated later
 

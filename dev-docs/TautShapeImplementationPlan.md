@@ -1,7 +1,7 @@
 # Taut Shape Implementation and Integration Plan
 
-Status: complete locally — Phases 0–8 implemented; packages unreleased  
-Date: 2026-08-22  
+Status: complete locally — Phases 0–8 implemented; packages unreleased
+Date: 2026-08-22
 Scope: the `taut-dev` workspace plus its Glade/Glial, Datascad, and Gryth
 integration seams
 
