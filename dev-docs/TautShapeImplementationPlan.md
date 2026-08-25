@@ -1,7 +1,7 @@
 # Taut Shape Implementation and Integration Plan
 
-Status: complete locally — Phases 0–8 implemented; packages unreleased
-Date: 2026-08-22
+Status: complete and pushed — Phases 0–8 implemented; `0.9.0` release candidate unpublished
+Date: 2026-08-25
 Scope: the `taut-dev` workspace plus its Glade/Glial, Datascad, and Gryth
 integration seams
 
@@ -590,6 +590,10 @@ matrices, and selected consumers. All artifacts remain explicitly development
 or private; tag mode rejects dirty trees, development versions, and path/hash
 pins before release. See `taut-shape/dev-docs/TautShapePhase8Review.md` and
 `taut-shape/dev-docs/TautShapeReleaseCompatibility.md`.
+
+Release preparation now follows `dev-docs/TautReleaseTrain.md`: `taut-proto`,
+the contract tag, and Rust/TypeScript/Python shape packages share major/minor
+`0.9`, begin at patch `0`, and may advance patch versions independently.
 
 #### Step 8.1 — Complete Glial's applicable log coverage
 
