@@ -19,14 +19,16 @@ For this train, every release coordinate is therefore `0.9.*`.
 | `taut` | PyPI `taut-proto` | `0.9.1` |
 | `taut-shape` | contract/corpus Git tag | `v0.9.0` |
 | `taut-shape-rs` | crates.io `taut-shape` | `0.9.0` |
-| `taut-shape-ts` | npm `@owebeeone/taut-shape` | `0.9.0` |
+| `taut-shape-ts` | npm `@owebeeone/taut-shape` | `0.9.1` |
 | `taut-shape-py` | PyPI `taut-shape` | `0.9.1` |
 
 The Python shape package requires `taut-proto>=0.9.1,<0.10`. Its patch advanced
 to 0.9.1 after the 0.9.0 GitHub workflow found that the wheel depended on schema
 files in a sibling contract checkout. No 0.9.0 Python artifact reached PyPI.
 The corrected wheel bundles those canonical schemas; Rust and TypeScript remain
-at 0.9.0.
+in the `0.9.*` train. TypeScript advanced to 0.9.1 after its 0.9.0 bootstrap
+package was found to export raw `.ts` files that Node refuses to load from
+`node_modules`; 0.9.1 instead ships compiled JavaScript and declarations.
 
 ## Consumer boundary
 
@@ -43,7 +45,7 @@ Grip and other independent dependencies retain their own version lines.
 1. Tag and publish `taut-proto 0.9.1`. (Complete.)
 2. Publish Rust `taut-shape 0.9.0`. (Complete.)
 3. Publish Python `taut-shape 0.9.1`. (Complete.)
-4. Publish TypeScript `@owebeeone/taut-shape 0.9.0`.
+4. Publish TypeScript `@owebeeone/taut-shape 0.9.1`.
 5. Replace consumer path/workspace/content pins with published `0.9.*` ranges or
    immutable release coordinates.
 6. Run the strict release compatibility gate and consumer CI.
@@ -56,3 +58,8 @@ is retained immutably for auditability; `v0.9.1` contains the fix.
 The same immutable-tag rule applies to Python `taut-shape` v0.9.0: its release
 workflow failed before registry publication, so v0.9.1 carries the standalone
 wheel correction.
+
+TypeScript `v0.9.0` is also retained immutably. Its bootstrap artifact reached
+npm before the raw-TypeScript consumer-install defect was found; v0.9.1 carries
+the compiled-package correction and the release workflow now tests the packed
+tarball through a clean consumer installation.
