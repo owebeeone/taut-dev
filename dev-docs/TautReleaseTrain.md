@@ -1,8 +1,8 @@
 # Taut 0.9 Release Train
 
-Status: package publication complete; required consumer and contract finalization in progress
+Status: released
 
-Date: 2026-08-25
+Date: 2026-08-26
 
 ## Version rule
 
@@ -48,8 +48,9 @@ Grip and other independent dependencies retain their own version lines.
 4. Publish TypeScript `@owebeeone/taut-shape 0.9.1`. (Complete.)
 5. Replace the required Glial consumer path pin with `^0.9.1`. (Complete.)
    Optional prototype consumers retain their documented development pins.
-6. Run the strict release compatibility gate and consumer CI.
+6. Run the strict release compatibility gate and consumer CI. (Complete.)
 7. Tag the contract repository at `v0.9.0` and declare the train released.
+   (Complete.)
 
 `taut-proto` tag `v0.9.0` was withdrawn before PyPI publication after its
 release workflow exposed a Python 3.11 dataclass compatibility issue. The tag
