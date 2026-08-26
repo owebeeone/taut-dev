@@ -1,6 +1,6 @@
 # Taut 0.9 Release Train
 
-Status: release in progress; protocol, Rust, and Python artifacts are published
+Status: package publication complete; required consumer and contract finalization in progress
 
 Date: 2026-08-25
 
@@ -45,9 +45,9 @@ Grip and other independent dependencies retain their own version lines.
 1. Tag and publish `taut-proto 0.9.1`. (Complete.)
 2. Publish Rust `taut-shape 0.9.0`. (Complete.)
 3. Publish Python `taut-shape 0.9.1`. (Complete.)
-4. Publish TypeScript `@owebeeone/taut-shape 0.9.1`.
-5. Replace consumer path/workspace/content pins with published `0.9.*` ranges or
-   immutable release coordinates.
+4. Publish TypeScript `@owebeeone/taut-shape 0.9.1`. (Complete.)
+5. Replace the required Glial consumer path pin with `^0.9.1`. (Complete.)
+   Optional prototype consumers retain their documented development pins.
 6. Run the strict release compatibility gate and consumer CI.
 7. Tag the contract repository at `v0.9.0` and declare the train released.
 
