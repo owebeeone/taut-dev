@@ -6,12 +6,14 @@ The protocol repository owns its PyPI release command::
     uv run --no-project --with pytest --with build --with twine \
       python taut/scripts/release.py --push vX.Y.Z
 
-After that artifact is visible on PyPI, this driver gates and tags the three
-shape packages together, creates their GitHub Releases (which trigger registry
-publishing), and finally tags the contract after consumer pins are released::
+After that artifact is visible on PyPI, this driver gates and tags the shape
+packages, creates their GitHub Releases (which trigger registry publishing),
+and finally tags the contract after consumer pins are released. Patch digits
+may vary inside one major/minor train::
 
     python scripts/release.py check v0.9.0
     python scripts/release.py tag-shapes v0.9.0 --push --github-releases
+    python scripts/release.py tag-package python v0.9.1 --push --github-release
     python scripts/release.py finalize v0.9.0 --push --github-release
 
 Release tags are immutable. A pre-existing tag is accepted only when it points
@@ -171,9 +173,8 @@ def cargo_workspace_version() -> str:
     return match.group(1)
 
 
-def assert_versions(shape_version: str) -> None:
-    data = manifest()
-    expected = {
+def package_versions() -> dict[str, str]:
+    return {
         "rust": cargo_workspace_version(),
         "typescript": str(
             json.loads((Path(REPOS["typescript"]["path"]) / "package.json").read_text())[
@@ -182,15 +183,16 @@ def assert_versions(shape_version: str) -> None:
         ),
         "python": scm_fallback(Path(REPOS["python"]["path"])),
     }
+
+
+def assert_versions() -> None:
+    data = manifest()
+    expected = package_versions()
     errors = [
-        f"{name}: package version {actual} != requested {shape_version}"
+        f"{name}: package version {actual} != compatibility manifest {data['packages'][name]['version']}"
         for name, actual in expected.items()
-        if actual != shape_version
+        if actual != str(data["packages"][name]["version"])
     ]
-    for name in SHAPES:
-        recorded = str(data["packages"][name]["version"])
-        if recorded != shape_version:
-            errors.append(f"{name}: compatibility manifest {recorded} != {shape_version}")
 
     protocol = data["release_train"]["protocol_package"]
     protocol_version = str(protocol["version"])
@@ -210,6 +212,17 @@ def assert_versions(shape_version: str) -> None:
             )
     if errors:
         fail("version preflight failed:\n  " + "\n  ".join(errors))
+
+
+def assert_package_tag(name: str, tag: str) -> None:
+    requested = parse_tag(tag)
+    actual = package_versions()[name]
+    recorded = str(manifest()["packages"][name]["version"])
+    if actual != requested or recorded != requested:
+        fail(
+            f"{name}: requested {requested}, package version {actual}, "
+            f"compatibility manifest {recorded}"
+        )
 
 
 def fetch_and_assert_synced(names: tuple[str, ...]) -> None:
@@ -245,9 +258,9 @@ def assert_clean(names: tuple[str, ...]) -> None:
 
 
 def run_check(tag: str, *, tests: bool) -> None:
-    shape_version = parse_tag(tag)
+    parse_tag(tag)
     require_tools("git", "gwz", "python3")
-    assert_versions(shape_version)
+    assert_versions()
     fetch_and_assert_synced(RELEASE_INPUTS)
     assert_clean(RELEASE_INPUTS)
 
@@ -294,7 +307,8 @@ def run_check(tag: str, *, tests: bool) -> None:
         env=python_env,
     )
     build_env = os.environ.copy()
-    build_env["SETUPTOOLS_SCM_PRETEND_VERSION_FOR_TAUT_SHAPE"] = shape_version
+    python_version = str(manifest()["packages"]["python"]["version"])
+    build_env["SETUPTOOLS_SCM_PRETEND_VERSION_FOR_TAUT_SHAPE"] = python_version
     run(
         ["uv", "run", "--no-project", "--with", "build", "python", "-m", "build"],
         cwd=Path(REPOS["python"]["path"]),
@@ -310,7 +324,7 @@ def run_check(tag: str, *, tests: bool) -> None:
         cwd=CONTRACT,
         env=matrix_env,
     )
-    log(f"shape release gates passed for {tag}")
+    log(f"shape release gates passed for the {parse_tag(tag).rsplit('.', 1)[0]}.* train")
 
 
 def local_tag_commit(name: str, tag: str) -> str | None:
@@ -373,18 +387,39 @@ def create_github_releases(names: tuple[str, ...], tag: str) -> None:
 
 
 def tag_shapes(args: argparse.Namespace) -> None:
-    parse_tag(args.tag)
+    shape_version = parse_tag(args.tag)
     if args.github_releases and not args.push:
         fail("--github-releases requires --push")
     if not args.skip_check:
         run_check(args.tag, tests=not args.skip_tests)
     else:
-        assert_versions(parse_tag(args.tag))
+        assert_versions()
         fetch_and_assert_synced(RELEASE_INPUTS)
         assert_clean(RELEASE_INPUTS)
+    versions = package_versions()
+    mismatches = [name for name in SHAPES if versions[name] != shape_version]
+    if mismatches:
+        fail(
+            f"tag-shapes requires one shared patch; {args.tag} does not match "
+            + ", ".join(f"{name} {versions[name]}" for name in mismatches)
+        )
     create_tags(SHAPES, args.tag, push=args.push)
     if args.github_releases:
         create_github_releases(SHAPES, args.tag)
+
+
+def tag_package(args: argparse.Namespace) -> None:
+    if args.github_release and not args.push:
+        fail("--github-release requires --push")
+    assert_package_tag(args.package, args.tag)
+    if not args.skip_check:
+        run_check(args.tag, tests=not args.skip_tests)
+    else:
+        fetch_and_assert_synced(RELEASE_INPUTS)
+        assert_clean(RELEASE_INPUTS)
+    create_tags((args.package,), args.tag, push=args.push)
+    if args.github_release:
+        create_github_releases((args.package,), args.tag)
 
 
 def finalize(args: argparse.Namespace) -> None:
@@ -414,6 +449,16 @@ def main() -> None:
     tag_parser.add_argument("--skip-check", action="store_true")
     tag_parser.add_argument("--skip-tests", action="store_true")
 
+    package_parser = subparsers.add_parser(
+        "tag-package", help="tag one language package at an independent patch"
+    )
+    package_parser.add_argument("package", choices=SHAPES)
+    package_parser.add_argument("tag", help="package release tag, e.g. v0.9.1")
+    package_parser.add_argument("--push", action="store_true")
+    package_parser.add_argument("--github-release", action="store_true")
+    package_parser.add_argument("--skip-check", action="store_true")
+    package_parser.add_argument("--skip-tests", action="store_true")
+
     final_parser = subparsers.add_parser("finalize", help="strict-gate and tag the contract")
     final_parser.add_argument("tag", help="contract release tag, e.g. v0.9.0")
     final_parser.add_argument("--push", action="store_true")
@@ -424,6 +469,8 @@ def main() -> None:
         run_check(args.tag, tests=not args.skip_tests)
     elif args.command == "tag-shapes":
         tag_shapes(args)
+    elif args.command == "tag-package":
+        tag_package(args)
     else:
         finalize(args)
 
