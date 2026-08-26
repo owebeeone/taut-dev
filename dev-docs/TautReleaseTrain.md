@@ -1,6 +1,6 @@
 # Taut 0.9 Release Train
 
-Status: release in progress; `taut-proto` 0.9.1 and Rust `taut-shape` 0.9.0 are published
+Status: release in progress; protocol, Rust, and Python artifacts are published
 
 Date: 2026-08-25
 
@@ -42,12 +42,12 @@ Grip and other independent dependencies retain their own version lines.
 
 1. Tag and publish `taut-proto 0.9.1`. (Complete.)
 2. Publish Rust `taut-shape 0.9.0`. (Complete.)
-3. Publish TypeScript `@owebeeone/taut-shape 0.9.0` and Python `taut-shape
-   0.9.1`.
-4. Replace consumer path/workspace/content pins with published `0.9.*` ranges or
+3. Publish Python `taut-shape 0.9.1`. (Complete.)
+4. Publish TypeScript `@owebeeone/taut-shape 0.9.0`.
+5. Replace consumer path/workspace/content pins with published `0.9.*` ranges or
    immutable release coordinates.
-5. Run the strict release compatibility gate and consumer CI.
-6. Tag the contract repository at `v0.9.0` and declare the train released.
+6. Run the strict release compatibility gate and consumer CI.
+7. Tag the contract repository at `v0.9.0` and declare the train released.
 
 `taut-proto` tag `v0.9.0` was withdrawn before PyPI publication after its
 release workflow exposed a Python 3.11 dataclass compatibility issue. The tag
