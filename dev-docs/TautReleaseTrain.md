@@ -18,8 +18,8 @@ For this train, every release coordinate is therefore `0.9.*`.
 | --- | --- | --- |
 | `taut` | PyPI `taut-proto` | `0.9.1` |
 | `taut-shape` | contract/corpus Git tag | `v0.9.0` |
-| `taut-shape-rs` | crates.io `taut-shape` | `0.9.0` |
-| `taut-shape-ts` | npm `@owebeeone/taut-shape` | `0.9.1` |
+| `taut-shape-rs` | crates.io `taut-shape` | `0.9.1` |
+| `taut-shape-ts` | npm `@owebeeone/taut-shape` | `0.9.2` |
 | `taut-shape-py` | PyPI `taut-shape` | `0.9.1` |
 
 The Python shape package requires `taut-proto>=0.9.1,<0.10`. Its patch advanced
@@ -64,3 +64,8 @@ TypeScript `v0.9.0` is also retained immutably. Its bootstrap artifact reached
 npm before the raw-TypeScript consumer-install defect was found; v0.9.1 carries
 the compiled-package correction and the release workflow now tests the packed
 tarball through a clean consumer installation.
+
+Rust `v0.9.1` and TypeScript `v0.9.2` are corrective release-workflow patches.
+Their tag-triggered runs use the standalone workflows that check out the
+contract corpus before testing. The earlier failed tag runs remain historical;
+their immutable tags are not moved.

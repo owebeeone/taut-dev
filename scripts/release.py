@@ -159,23 +159,38 @@ def scm_fallback(repo: Path) -> str:
     return match.group(1)
 
 
-def cargo_workspace_version() -> str:
-    path = Path(REPOS["rust"]["path"]) / "Cargo.toml"
+def cargo_manifest_version(path: Path, section_name: str) -> str:
     text = path.read_text()
-    section = re.search(r"(?ms)^\[workspace\.package\]\s*(.*?)(?=^\[|\Z)", text)
+    section = re.search(
+        rf"(?ms)^\[{re.escape(section_name)}\]\s*(.*?)(?=^\[|\Z)",
+        text,
+    )
     match = re.search(
         r'^version\s*=\s*"([^"]+)"',
         section.group(1) if section else "",
         re.MULTILINE,
     )
     if match is None:
-        fail(f"{path}: missing workspace.package.version")
+        fail(f"{path}: missing {section_name}.version")
     return match.group(1)
+
+
+def cargo_package_versions() -> dict[str, str]:
+    repo = Path(REPOS["rust"]["path"])
+    return {
+        "workspace": cargo_manifest_version(repo / "Cargo.toml", "workspace.package"),
+        "crate": cargo_manifest_version(
+            repo / "crates" / "taut-shape" / "Cargo.toml", "package"
+        ),
+        "tool": cargo_manifest_version(
+            repo / "crates" / "taut-shape-tool" / "Cargo.toml", "package"
+        ),
+    }
 
 
 def package_versions() -> dict[str, str]:
     return {
-        "rust": cargo_workspace_version(),
+        "rust": cargo_package_versions()["crate"],
         "typescript": str(
             json.loads((Path(REPOS["typescript"]["path"]) / "package.json").read_text())[
                 "version"
@@ -200,6 +215,13 @@ def assert_versions() -> None:
     if protocol_fallback != protocol_version:
         errors.append(
             f"protocol: pyproject fallback {protocol_fallback} != manifest {protocol_version}"
+        )
+
+    rust_versions = cargo_package_versions()
+    if len(set(rust_versions.values())) != 1:
+        errors.append(
+            "rust: workspace/crate/tool versions differ: "
+            + ", ".join(f"{name} {version}" for name, version in rust_versions.items())
         )
 
     train = data["release_train"]
