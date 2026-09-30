@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """Coordinate the Taut protocol/shape release train through GWZ.
 
-The protocol repository owns its PyPI release command::
+Each package repository releases with gearu, which runs the package's own
+checks, tags it and creates the GitHub Release that triggers its registry
+workflow. The protocol goes first, from its own checkout::
 
-    uv run --no-project --with pytest --with build --with twine \
-      python taut/scripts/release.py --push vX.Y.Z
+    cd taut && gearu release X.Y.Z --push --github-release
 
-After that artifact is visible on PyPI, this driver gates and tags the shape
-packages, creates their GitHub Releases (which trigger registry publishing),
-and finally tags the contract after consumer pins are released. Patch digits
-may vary inside one major/minor train::
+After that artifact is visible on PyPI, this driver checks the train across
+repositories, releases each shape package through gearu, and finally tags the
+contract after consumer pins are released. Patch digits may vary inside one
+major/minor train::
 
     python scripts/release.py check v0.9.0
     python scripts/release.py tag-shapes v0.9.0 --push --github-releases
@@ -408,6 +409,21 @@ def create_github_releases(names: tuple[str, ...], tag: str) -> None:
         run(["gh", "release", "create", tag, "--repo", repo, "--title", tag, "--notes", notes])
 
 
+def gearu_release(names: tuple[str, ...], tag: str, *, push: bool, github_release: bool) -> None:
+    """Release each package with gearu, from its own checkout. gearu runs the package's checks on a
+    candidate, tags it and, with `push`, pushes the branch and the tag together; with
+    `github_release` it creates the GitHub Release that starts the package's registry workflow.
+    Rerunning a version gearu has tagged resumes it rather than moving the tag."""
+    require_tools("gearu")
+    for name in names:
+        command = ["gearu", "release", parse_tag(tag)]
+        if push:
+            command.append("--push")
+        if github_release:
+            command.append("--github-release")
+        run(command, cwd=Path(REPOS[name]["path"]))
+
+
 def tag_shapes(args: argparse.Namespace) -> None:
     shape_version = parse_tag(args.tag)
     if args.github_releases and not args.push:
@@ -425,9 +441,7 @@ def tag_shapes(args: argparse.Namespace) -> None:
             f"tag-shapes requires one shared patch; {args.tag} does not match "
             + ", ".join(f"{name} {versions[name]}" for name in mismatches)
         )
-    create_tags(SHAPES, args.tag, push=args.push)
-    if args.github_releases:
-        create_github_releases(SHAPES, args.tag)
+    gearu_release(SHAPES, args.tag, push=args.push, github_release=args.github_releases)
 
 
 def tag_package(args: argparse.Namespace) -> None:
@@ -439,9 +453,7 @@ def tag_package(args: argparse.Namespace) -> None:
     else:
         fetch_and_assert_synced(RELEASE_INPUTS)
         assert_clean(RELEASE_INPUTS)
-    create_tags((args.package,), args.tag, push=args.push)
-    if args.github_release:
-        create_github_releases((args.package,), args.tag)
+    gearu_release((args.package,), args.tag, push=args.push, github_release=args.github_release)
 
 
 def finalize(args: argparse.Namespace) -> None:

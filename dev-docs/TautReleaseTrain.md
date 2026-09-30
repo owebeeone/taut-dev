@@ -69,3 +69,19 @@ Rust `v0.9.1` and TypeScript `v0.9.2` are corrective release-workflow patches.
 Their tag-triggered runs use the standalone workflows that check out the
 contract corpus before testing. The earlier failed tag runs remain historical;
 their immutable tags are not moved.
+
+## Release tooling (2026-09-30)
+
+Every package repository now releases with [gearu](https://github.com/owebeeone/gearu): taut
+(`taut-proto`), taut-shape-py, taut-shape-rs and taut-shape-ts. Each keeps a `gearu.toml`, whose
+checks are the ones its CI runs before it publishes, and a `RELEASE.md`.
+- `gearu release X.Y.Z --push --github-release` runs the package's checks on a candidate and tags
+  it. It pushes the branch and the tag together, and creates the GitHub Release that starts the
+  registry workflow.
+- `scripts/release.py tag-shapes` and `tag-package` still run this train's cross-repository
+  checks: versions against the compatibility manifest, every input synced and clean, and each
+  package's gates. They then call gearu for each package instead of tagging it themselves.
+- Each shape package's checks read the contract corpus from the `taut-shape` checkout beside it,
+  as CI does, so shape releases run from this workspace.
+- The contract, taut-shape, has no package manifest, which gearu requires, so `finalize` still
+  tags it through gwz.
