@@ -30,6 +30,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -318,7 +319,8 @@ def run_check(tag: str, *, tests: bool) -> None:
     run(["pnpm", "install", "--frozen-lockfile"], cwd=Path(REPOS["typescript"]["path"]))
     run(["pnpm", "typecheck"], cwd=Path(REPOS["typescript"]["path"]))
     run(["pnpm", "test"], cwd=Path(REPOS["typescript"]["path"]))
-    run(["npm", "pack", "--dry-run"], cwd=Path(REPOS["typescript"]["path"]))
+    with tempfile.TemporaryDirectory(prefix="taut-shape-ts-pack-") as pack_dir:
+        run(["pnpm", "pack", "--pack-destination", pack_dir], cwd=Path(REPOS["typescript"]["path"]))
 
     python_env = os.environ.copy()
     python_env["PYTHONPATH"] = os.pathsep.join(
