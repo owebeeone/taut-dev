@@ -72,16 +72,18 @@ their immutable tags are not moved.
 
 ## Release tooling (2026-09-30)
 
-Every package repository now releases with [gearu](https://github.com/owebeeone/gearu): taut
-(`taut-proto`), taut-shape-py, taut-shape-rs and taut-shape-ts. Each keeps a `gearu.toml`, whose
-checks are the ones its CI runs before it publishes, and a `RELEASE.md`.
-- `gearu release X.Y.Z --push --github-release` runs the package's checks on a candidate and tags
+Every repository in the train now releases with [gearu](https://github.com/owebeeone/gearu):
+taut (`taut-proto`), taut-shape-py, taut-shape-rs, taut-shape-ts and the contract, taut-shape. Each
+keeps a `gearu.toml`, whose checks are the ones its CI runs before it publishes, and a `RELEASE.md`.
+- `gearu release X.Y.Z --push --github-release` runs the repository's checks on a candidate and tags
   it. It pushes the branch and the tag together, and creates the GitHub Release that starts the
   registry workflow.
-- `scripts/release.py tag-shapes` and `tag-package` still run this train's cross-repository
-  checks: versions against the compatibility manifest, every input synced and clean, and each
-  package's gates. They then call gearu for each package instead of tagging it themselves.
-- Each shape package's checks read the contract corpus from the `taut-shape` checkout beside it,
-  as CI does, so shape releases run from this workspace.
-- The contract, taut-shape, has no package manifest, which gearu requires, so `finalize` still
-  tags it through gwz.
+- `scripts/release.py tag-shapes`, `tag-package` and `finalize` still run this train's
+  cross-repository checks: versions against the compatibility manifest, every input synced and
+  clean, and each package's gates. They then call gearu for each repository instead of tagging it
+  themselves.
+- Each shape package's checks read the contract corpus from the `taut-shape` checkout beside it, as
+  CI does, so shape releases run from this workspace.
+- The contract publishes nothing. Its `pyproject.toml` exists for gearu, with the tag as its
+  version, which the manifest's `contract_version` must equal. Its gearu check is the release gate,
+  `release/check_compatibility.py --release`, which reads the release inputs from this workspace.

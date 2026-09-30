@@ -8,8 +8,8 @@ workflow. The protocol goes first, from its own checkout::
     cd taut && gearu release X.Y.Z --push --github-release
 
 After that artifact is visible on PyPI, this driver checks the train across
-repositories, releases each shape package through gearu, and finally tags the
-contract after consumer pins are released. Patch digits may vary inside one
+repositories, releases each shape package through gearu, and finally releases
+the contract through gearu after consumer pins are released. Patch digits may vary inside one
 major/minor train::
 
     python scripts/release.py check v0.9.0
@@ -350,63 +350,12 @@ def run_check(tag: str, *, tests: bool) -> None:
     log(f"shape release gates passed for the {parse_tag(tag).rsplit('.', 1)[0]}.* train")
 
 
-def local_tag_commit(name: str, tag: str) -> str | None:
-    result = git(
-        name,
-        "rev-parse",
-        "-q",
-        "--verify",
-        f"refs/tags/{tag}^{{commit}}",
-        check=False,
-    )
-    return result.stdout.strip() if result.returncode == 0 else None
 
 
-def assert_tags_immutable(names: tuple[str, ...], tag: str) -> bool:
-    run(gwz_args(names, "tag", "--fetch"))
-    existing_count = 0
-    errors: list[str] = []
-    for name in names:
-        head = git(name, "rev-parse", "HEAD").stdout.strip()
-        tagged = local_tag_commit(name, tag)
-        if tagged is None:
-            continue
-        existing_count += 1
-        if tagged != head:
-            errors.append(f"{name}: {tag} is {tagged[:10]}, current HEAD is {head[:10]}")
-    if errors:
-        fail("refusing to move release tags:\n  " + "\n  ".join(errors))
-    if existing_count not in (0, len(names)):
-        fail(f"{tag} exists in only {existing_count}/{len(names)} selected repositories")
-    return existing_count == len(names)
 
 
-def create_tags(names: tuple[str, ...], tag: str, *, push: bool) -> None:
-    already_tagged = assert_tags_immutable(names, tag)
-    if already_tagged:
-        log(f"{tag} already points at every selected release commit")
-    else:
-        run(gwz_args(names, "tag", tag, "-m", f"Taut shape release {tag}"))
-    if push:
-        run(gwz_args(names, "tag", "--push", tag))
-    else:
-        log(f"next step: rerun with --push to publish {tag}")
 
 
-def create_github_releases(names: tuple[str, ...], tag: str) -> None:
-    require_tools("gh")
-    for name in names:
-        repo = str(REPOS[name]["github"])
-        existing = run(
-            ["gh", "release", "view", tag, "--repo", repo],
-            capture=True,
-            check=False,
-        )
-        if existing.returncode == 0:
-            log(f"{repo}: GitHub Release {tag} already exists")
-            continue
-        notes = f"{name} Taut shape package {tag}. Publishing this release triggers the registry workflow."
-        run(["gh", "release", "create", tag, "--repo", repo, "--title", tag, "--notes", notes])
 
 
 def gearu_release(names: tuple[str, ...], tag: str, *, push: bool, github_release: bool) -> None:
@@ -463,9 +412,7 @@ def finalize(args: argparse.Namespace) -> None:
     fetch_and_assert_synced(RELEASE_INPUTS)
     assert_clean(RELEASE_INPUTS)
     run(["python3", "release/check_compatibility.py", "--release"], cwd=CONTRACT)
-    create_tags(("contract",), args.tag, push=args.push)
-    if args.github_release:
-        create_github_releases(("contract",), args.tag)
+    gearu_release(("contract",), args.tag, push=args.push, github_release=args.github_release)
 
 
 def main() -> None:
