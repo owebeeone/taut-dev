@@ -45,7 +45,7 @@ members:
     commit: 83291c2c7c7b126e41625bd29623870330f3b0d6
     branch: main
     detached: false
-    dirty: false
+    dirty: true
     materialized: true
   mem_taut_shape:
     path: taut-shape
