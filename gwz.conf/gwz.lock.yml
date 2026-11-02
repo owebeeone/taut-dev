@@ -42,7 +42,7 @@ members:
     path: taut
     source_id: src_taut
     source_kind: git
-    commit: 848f6e749f607d82b93941095f0cbbc7f10bbabf
+    commit: bd93122c66c917f9144db57b048e34831e92c244
     branch: main
     detached: false
     dirty: true
