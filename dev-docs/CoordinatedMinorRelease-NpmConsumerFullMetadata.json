@@ -1,0 +1,142 @@
+{
+  "commands": [
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\npm.CMD",
+        "install",
+        "--registry=https://registry.npmjs.org",
+        "--ignore-scripts",
+        "--full-metadata",
+        "--prefer-online"
+      ],
+      "exit": 0,
+      "phase": "public-npm-consumer"
+    },
+    {
+      "args": [
+        "C:\\Users\\gianni\\AppData\\Roaming\\uv\\python\\cpython-3.13.5-windows-x86_64-none\\python.exe",
+        "-m",
+        "taut.cli",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\off",
+        "--lang",
+        "typescript",
+        "--runtime",
+        "package",
+        "--runtime-bindings",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\bindings.json"
+      ],
+      "exit": 0,
+      "phase": "development-generation"
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\node_modules\\typescript\\bin\\tsc",
+        "--target",
+        "ES2022",
+        "--module",
+        "NodeNext",
+        "--moduleResolution",
+        "NodeNext",
+        "--strict",
+        "--skipLibCheck",
+        "--rewriteRelativeImportExtensions",
+        "--rootDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\off",
+        "--outDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\off\\built",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\off\\main.ts"
+      ],
+      "exit": 0,
+      "phase": "public-npm-consumer"
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\off\\built\\main.js"
+      ],
+      "exit": 0,
+      "phase": "public-npm-consumer"
+    },
+    {
+      "args": [
+        "C:\\Users\\gianni\\AppData\\Roaming\\uv\\python\\cpython-3.13.5-windows-x86_64-none\\python.exe",
+        "-m",
+        "taut.cli",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\on",
+        "--lang",
+        "typescript",
+        "--runtime",
+        "package",
+        "--runtime-bindings",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\bindings.json",
+        "--with-validation"
+      ],
+      "exit": 0,
+      "phase": "development-generation"
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\node_modules\\typescript\\bin\\tsc",
+        "--target",
+        "ES2022",
+        "--module",
+        "NodeNext",
+        "--moduleResolution",
+        "NodeNext",
+        "--strict",
+        "--skipLibCheck",
+        "--rewriteRelativeImportExtensions",
+        "--rootDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\on",
+        "--outDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\on\\built",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\on\\main.ts"
+      ],
+      "exit": 0,
+      "phase": "public-npm-consumer"
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\npm-public-consumer-full-metadata\\on\\built\\main.js"
+      ],
+      "exit": 0,
+      "phase": "public-npm-consumer"
+    }
+  ],
+  "generator_commit": "9260da45f486ed5a57aa399788c2936f2c044619",
+  "generator_form": "qualified development source; PyPI release is held",
+  "generator_public_tag": "https://github.com/owebeeone/taut/tree/v0.11.0",
+  "modes": [
+    "off",
+    "on"
+  ],
+  "runtime_nodepath": false,
+  "runtime_package": {
+    "bin": {
+      "taut-shape-tool": "dist/cli.js"
+    },
+    "engines": {
+      "node": ">=22"
+    },
+    "integrity": "sha512-QYJ72XrQi8SO8QMWuy2pysxlgizvzcHecF8O4X779/SOia2Kg0f3u2AXnq2ldAE9PTeUNkVpinDJaWAUuY9GJw==",
+    "license": "MIT",
+    "resolved": "https://registry.npmjs.org/@owebeeone/taut-shape/-/taut-shape-0.11.0.tgz",
+    "version": "0.11.0"
+  },
+  "runtime_pythonpath": false,
+  "runtime_registry": "https://registry.npmjs.org",
+  "runtime_source_paths": false,
+  "schema_sha256": "2d8849575d005fe81ebeeab9f6136d26c7d0fd5edac50aca5faf6a76a4c38c40",
+  "shared_owner": true,
+  "status": "PASS",
+  "version": "0.11.0"
+}

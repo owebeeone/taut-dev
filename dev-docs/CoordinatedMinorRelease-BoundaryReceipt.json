@@ -1,0 +1,63 @@
+{
+  "checked_utc": "2026-11-02T22:38:03.059163+00:00",
+  "status": "PARTIAL: npm published; initial foundation credential required",
+  "member_heads": {
+    "taut": "9260da45f486ed5a57aa399788c2936f2c044619",
+    "glade": "491dda9645a3ef76b6c1632fbb6bddef926e40a7",
+    "taut-shape": "89916c4d017123d7c16f094eb2fba6ece98facc0",
+    "taut-shape-rs": "506b60ef059208c9dd7a1d85fa6df4deb8824577",
+    "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8",
+    "taut-shape-py": "d33a069198c5540bfdd5b92b6ff22615d8113fa1",
+    "glial": "6a9a9e216629ccdd6b57aa0c66436d5fa7e0e654",
+    "glade-decl-ts": "f1b7492f3a970a8af25415356c3fb62db40c4a15",
+    "grip-core": "b9d7149a1c3748ad2b4490d9d70ca23ee121268f"
+  },
+  "unrelated_and_contract_heads_unchanged": [
+    "glade",
+    "glade-decl-ts",
+    "glial",
+    "grip-core",
+    "taut-shape"
+  ],
+  "all_tracked_member_trees_clean": true,
+  "expected_preserved_untracked_taut": 35,
+  "registry": {
+    "taut-proto": {
+      "url": "https://pypi.org/pypi/taut-proto/0.11.0/json",
+      "status": 404
+    },
+    "shape-py": {
+      "url": "https://pypi.org/pypi/taut-shape/0.11.0/json",
+      "status": 404
+    },
+    "foundation": {
+      "url": "https://crates.io/api/v1/crates/taut-foundation/0.11.0",
+      "status": 404
+    },
+    "shape-rs": {
+      "url": "https://crates.io/api/v1/crates/taut-shape/0.11.0",
+      "status": 404
+    },
+    "shape-ts": {
+      "url": "https://registry.npmjs.org/@owebeeone%2Ftaut-shape/0.11.0",
+      "status": 200
+    }
+  },
+  "npm_workflow": {
+    "id": 41537841200,
+    "conclusion": "success"
+  },
+  "foundation_preflight": {
+    "id": 41536648490,
+    "conclusion": "success"
+  },
+  "foundation_upload": {
+    "id": 41536859807,
+    "conclusion": "failure",
+    "http_status": 403,
+    "cause": "unknown; failed API-token route, no expiry/scope conclusion"
+  },
+  "upstream_crates_io_source": "c2cca915732c4d7abb27a8094c58217d429f6cb7",
+  "preservation": "CoordinatedMinorRelease-Preservation.json",
+  "npm_consumer": "CoordinatedMinorRelease-NpmConsumer.json"
+}

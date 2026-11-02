@@ -29,15 +29,34 @@ crates.io403 authentication failed; all five0.11.0 registry versions remain
 absent at that check. Native and WSL standard Cargo credentials/config/env
 contain no alternate credential. Taut/Python/Rust registry publication is held.
 
-Required credential action: replace `CARGO_REGISTRY_TOKEN` in repository
-`owebeeone/taut-shape-rs`, environment `crates-io`, with a valid token authorized
-for the initial foundation publication. Never put the value in a receipt/chat.
-Then safely retry the same immutable inputs with:
-
-`gh run rerun 41536859807 --repo owebeeone/taut-shape-rs --failed`
+The 403 proves failure of that credential route only; its cause and the secret's
+scope/expiry are unknown. No token replacement or retry has been performed.
+The existing `taut-shape` publisher is verified by crates.io's 0.10.0
+`trustpub_data` and successful run36682081483. It uses `release.yml`, OIDC,
+and environment `crates-io`. That crate-specific trust cannot create the absent
+`taut-foundation` crate. Current official documentation and server source still
+require an API token for an initial publication; see the immutable references in
+CoordinatedMinorRelease-PublicationBoundary.md. Changing foundation.yml to OIDC
+alone cannot supply this missing crate-side eligibility.
 
 The coordinating task explicitly permits independent coherent releases. The
 same Code+Surface and State originators both GO independent TypeScript79d3899
 localv0.11.0 (only package-version delta;315pass/zero fail/skip, typecheck and
 pack passed). It has no runtime dependency on held PyPI/crates artifacts.
-Proceeding through its Gearu/workflow publication; result still pending.
+Gearu pushed79d3899/v0.11.0 and created its GitHub Release. Run41537841200
+terminated SUCCESS and npm accepted the upload. The public npm0.11.0 package
+installed in a fresh consumer with validation OFF/ON, codecs, immutable
+descriptors, and shared ownership passing. The successful install used npm's
+supported `--full-metadata` option while abbreviated registry metadata lagged.
+A second fresh ordinary npm install and both consumer modes subsequently passed.
+Generation used the
+qualified public Taut tag's development source because its PyPI release is held.
+This proves the public npm runtime, not a public PyPI compiler release.
+
+All35 preserved untracked artifacts have now been restored and matched to
+their before hashes; all five protected files match, enum.case remains an
+ancestor, and the reversible stash is retained. Taut has zero tracked changes
+and exactly those35 untracked files. Other members are clean. GWZ capture
+records the actual release commits and preserves its dirty-state warning for
+those user artifacts. Final workspace publication is a partial-release receipt,
+not acceptance of the remaining unpublished packages.
