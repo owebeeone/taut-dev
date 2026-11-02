@@ -42,7 +42,7 @@ members:
     path: taut
     source_id: src_taut
     source_kind: git
-    commit: 5da517f04a927c80f7dcc77ea7cc51836b73a4d3
+    commit: 092f0b4871f33a93fe452ca25eab092e544516ea
     branch: main
     detached: false
     dirty: false
@@ -69,7 +69,7 @@ members:
     path: taut-shape-rs
     source_id: src_taut_shape_rs
     source_kind: git
-    commit: e63ec55123977f6174211cdc7dfc80ad9fac513d
+    commit: 506b60ef059208c9dd7a1d85fa6df4deb8824577
     branch: main
     detached: false
     dirty: false
