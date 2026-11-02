@@ -60,3 +60,10 @@ and exactly those35 untracked files. Other members are clean. GWZ capture
 records the actual release commits and preserves its dirty-state warning for
 those user artifacts. Final workspace publication is a partial-release receipt,
 not acceptance of the remaining unpublished packages.
+
+Partial-boundary receipt19deeb49cb5dd84a2079af9a4c19e28723109f92 received GO
+from both original reviewers in ReviewCode-PublicationBoundary.md and
+ReviewState-PublicationBoundary.md. This accepts publishing the root receipt
+only. The full release train remains incomplete pending foundation bootstrap
+and the held registry/workflow/consumer gates. No additional remediation round
+or runtime change was needed for this closure.
