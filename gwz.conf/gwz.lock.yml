@@ -42,10 +42,10 @@ members:
     path: taut
     source_id: src_taut
     source_kind: git
-    commit: bd93122c66c917f9144db57b048e34831e92c244
+    commit: 5da517f04a927c80f7dcc77ea7cc51836b73a4d3
     branch: main
     detached: false
-    dirty: true
+    dirty: false
     materialized: true
   mem_taut_shape:
     path: taut-shape
@@ -60,7 +60,7 @@ members:
     path: taut-shape-py
     source_id: src_taut_shape_py
     source_kind: git
-    commit: c08c2a1b5197f761c5b0b835c588da512130ceda
+    commit: d33a069198c5540bfdd5b92b6ff22615d8113fa1
     branch: main
     detached: false
     dirty: false
@@ -69,7 +69,7 @@ members:
     path: taut-shape-rs
     source_id: src_taut_shape_rs
     source_kind: git
-    commit: 8e92b89ed3a4f218a5a4e018fbfee6301fcc14b4
+    commit: e63ec55123977f6174211cdc7dfc80ad9fac513d
     branch: main
     detached: false
     dirty: false
