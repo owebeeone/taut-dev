@@ -1,0 +1,11 @@
+{
+  "version": "0.11.0",
+  "source_sha": "9260da45f486ed5a57aa399788c2936f2c044619",
+  "registry_checksum": "63ac99ac22bb0e5e9d645bf1f49cc4ff974d82c05219f72b83c9f03cb93375ef",
+  "local_archive_checksum": "09e917939e4edb5890f55a3e67d23653c4d9c91a1ad048eeb4eb47526c93a2f8",
+  "payload_files": 12,
+  "status": "published-payload-verified",
+  "workflow_archive_checksum": "63ac99ac22bb0e5e9d645bf1f49cc4ff974d82c05219f72b83c9f03cb93375ef",
+  "local_repack_archive_bytes_equal": false,
+  "comparison": "Every uncompressed archive entry and byte equal; archive-container checksum may differ across local repack."
+}

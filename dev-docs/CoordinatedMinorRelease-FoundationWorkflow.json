@@ -1,0 +1,8 @@
+{
+  "local_archive_checksum": "63ac99ac22bb0e5e9d645bf1f49cc4ff974d82c05219f72b83c9f03cb93375ef",
+  "payload_files": 12,
+  "registry_checksum": "63ac99ac22bb0e5e9d645bf1f49cc4ff974d82c05219f72b83c9f03cb93375ef",
+  "source_sha": "9260da45f486ed5a57aa399788c2936f2c044619",
+  "status": "published-payload-verified",
+  "version": "0.11.0"
+}

@@ -45,7 +45,7 @@ members:
     commit: 9260da45f486ed5a57aa399788c2936f2c044619
     branch: main
     detached: false
-    dirty: true
+    dirty: false
     materialized: true
   mem_taut_shape:
     path: taut-shape
@@ -69,7 +69,7 @@ members:
     path: taut-shape-rs
     source_id: src_taut_shape_rs
     source_kind: git
-    commit: 506b60ef059208c9dd7a1d85fa6df4deb8824577
+    commit: 7f2a60747901fcf15362ab3c9a8af65c20faad68
     branch: main
     detached: false
     dirty: false
