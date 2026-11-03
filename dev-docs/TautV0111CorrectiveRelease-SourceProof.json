@@ -1,0 +1,27 @@
+{
+  "collection": 2574,
+  "evidence": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\gate-evidence\\taut-release-checks-j9c7b2kd",
+  "members": {
+    "taut": "0258b49e92c8b4ccd95027b4b10ad0b2f3992c52",
+    "taut-shape-py": "d33a069198c5540bfdd5b92b6ff22615d8113fa1",
+    "taut-shape-rs": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+    "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8"
+  },
+  "native_cases": 2562,
+  "only_release_delta": "none: Python version is tag-derived; foundation remains0.11.0",
+  "parity_variants": 16,
+  "parity_wrappers": 8,
+  "posix_cases": 4,
+  "protected_five_unchanged": true,
+  "raw_committed_release_matches_qualified_candidate": true,
+  "raw_git_blobs_verified": 984,
+  "release_commit": "0258b49e92c8b4ccd95027b4b10ad0b2f3992c52",
+  "required_cases": 2566,
+  "rows_per_variant": 88,
+  "source_files_hashed": 984,
+  "source_head": "0258b49e92c8b4ccd95027b4b10ad0b2f3992c52",
+  "status": "QUALIFIED PUBLIC COMPILER TAG SOURCE; registry publication is recorded separately",
+  "tag": "v0.11.1",
+  "tree_hash": "1773963420ab5be7aab1323865f09066ae2e65d84a0fe96a6caef1049cd211ca",
+  "workspace": "6d332151c3226db2cb82ca3468bee66b27c7a444"
+}

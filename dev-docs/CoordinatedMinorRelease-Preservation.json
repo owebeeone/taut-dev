@@ -2,7 +2,12 @@
   "status": "PASS",
   "restored35": true,
   "protected5": true,
-  "retained_stash": "23d45758f2a73de865dacc2ebc68e6dc9ef22ed6",
+  "retained_stash": "cad981df4cabc771c91c0530db0f2bcd90caa263",
+  "retained_stashes": [
+    "cad981df4cabc771c91c0530db0f2bcd90caa263",
+    "23d45758f2a73de865dacc2ebc68e6dc9ef22ed6",
+    "54d964b91a674fd86aeb860cf4b43c53f1dd87d0"
+  ],
   "tracked_changes": false,
   "enum_case_ancestor": true,
   "hashes": {

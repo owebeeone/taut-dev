@@ -13,6 +13,8 @@ parity wrappers are accounted by the actual16 variants,88 rows each. Package,
 132-file raw-byte smoke and exact checks passed. All984 raw committed blobs
 match the qualified candidate, tree1773963420ab5be7aab1323865f09066ae2e65d84a0fe96a6caef1049cd211ca.
 Native tests took641.08s. Evidence is retained in gate-evidence/taut-release-checks-j9c7b2kd.
+Qualification.json is the pre-push snapshot; the current public source state
+is recorded here and in SourceProof.json rather than rewriting that snapshot.
 No old qualification is relabelled to this source. Existing v0.11.0 remains
 immutable and its PyPI workflow failed; no compiler0.11.0 package was uploaded.
 
@@ -37,3 +39,9 @@ Python shape source d33a069 remains accepted, and its0.11.0 release waits for
 public compiler0.11.1. Its dependency range admits that compiler patch.
 The original temporary token is revoked, its GitHub secret removed, and it
 must never be accessed/reused. No remaining publication requires it.
+
+The exact35 artifacts have been restored from cad981df, with every original
+hash matching and all five protected files unchanged. All three preservation
+stashes remain retained, enum.case remains an ancestor, and the current tracked
+Taut source still matches all984 qualified raw Git blobs. Its only expected
+dirty-state warning is those35 preserved untracked files.
