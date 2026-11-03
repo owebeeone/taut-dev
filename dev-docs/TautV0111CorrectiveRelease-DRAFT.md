@@ -1,7 +1,8 @@
 # Taut 0.11.1 corrective release
 
-Status: **settled corrective source0258b49e92c8b4ccd95027b4b10ad0b2f3992c52;
-source acceptance and exact Gearu qualification pending**.
+Status: **corrective source0258b49e92c8b4ccd95027b4b10ad0b2f3992c52 accepted
+by both original reviewers and fully qualified by Gearu; publication and final
+consumers in progress**. The originally reviewed DRAFT is retained at root1fc9e810.
 
 The original coordinated-release authorization includes necessary readiness
 corrections. Subsequent explicit steering authorizes this minimal0.11.1 compiler
