@@ -43,6 +43,11 @@ The original Code+Surface and State reviewers receive focused same-originator
 closure for this mechanical Rust lock/version delta before its public push.
 No source implementation or workflow redesign is proposed.
 
+Both original reviewers reported GO on the exact root f2d2586/Rust7f2a607
+tuple in ReviewCode-RustPublication.md and ReviewState-RustPublication.md.
+This accepts publishing this Rust candidate through Gearu/OIDC only; all
+terminal workflows and public consumer completion gates remain required.
+
 Python shape source remains accepted d33a069198c5540bfdd5b92b6ff22615d8113fa1.
 After Taut is verified on PyPI, its configured Gearu checks must test installed
 registry dependencies and build the0.11.0 candidate, then publish its existing
