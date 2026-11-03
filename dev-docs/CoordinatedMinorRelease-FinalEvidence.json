@@ -1,0 +1,1753 @@
+{
+  "status": "PUBLICATION_AND_LOCAL_CHECKS_PASS; final review/root remote proof pending",
+  "workflows": {
+    "compiler": {
+      "conclusion": "success",
+      "databaseId": 41561903710,
+      "headSha": "0258b49e92c8b4ccd95027b4b10ad0b2f3992c52",
+      "jobs": [
+        {
+          "completedAt": "2026-11-03T02:01:27Z",
+          "conclusion": "success",
+          "databaseId": 125674225204,
+          "name": "Tests (Python 3.13)",
+          "startedAt": "2026-11-03T01:46:28Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T01:46:30Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T01:46:28Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:31Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T01:46:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:32Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T01:46:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:33Z",
+              "conclusion": "success",
+              "name": "Run pnpm/action-setup@v4",
+              "number": 4,
+              "startedAt": "2026-11-03T01:46:32Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:33Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@v6",
+              "number": 5,
+              "startedAt": "2026-11-03T01:46:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:37Z",
+              "conclusion": "success",
+              "name": "Materialize exact composition inputs",
+              "number": 6,
+              "startedAt": "2026-11-03T01:46:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:43Z",
+              "conclusion": "success",
+              "name": "Select the qualified native test tools",
+              "number": 7,
+              "startedAt": "2026-11-03T01:46:37Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:43Z",
+              "conclusion": "success",
+              "name": "Cache the declared optional Rust dependency for offline composition probes",
+              "number": 8,
+              "startedAt": "2026-11-03T01:46:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:01:24Z",
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "startedAt": "2026-11-03T01:46:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:01:24Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@v6",
+              "number": 15,
+              "startedAt": "2026-11-03T02:01:24Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:01:24Z",
+              "conclusion": "success",
+              "name": "Post Run pnpm/action-setup@v4",
+              "number": 16,
+              "startedAt": "2026-11-03T02:01:24Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:01:24Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 17,
+              "startedAt": "2026-11-03T02:01:24Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:01:24Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "startedAt": "2026-11-03T02:01:24Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:01:24Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "startedAt": "2026-11-03T02:01:24Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut/actions/runs/41561903710/job/125674225204"
+        },
+        {
+          "completedAt": "2026-11-03T02:05:32Z",
+          "conclusion": "success",
+          "databaseId": 125674225316,
+          "name": "Tests (Python 3.10)",
+          "startedAt": "2026-11-03T01:46:27Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T01:46:29Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T01:46:28Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:30Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T01:46:29Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:37Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T01:46:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:38Z",
+              "conclusion": "success",
+              "name": "Run pnpm/action-setup@v4",
+              "number": 4,
+              "startedAt": "2026-11-03T01:46:37Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:39Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@v6",
+              "number": 5,
+              "startedAt": "2026-11-03T01:46:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:41Z",
+              "conclusion": "success",
+              "name": "Materialize exact composition inputs",
+              "number": 6,
+              "startedAt": "2026-11-03T01:46:39Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:49Z",
+              "conclusion": "success",
+              "name": "Select the qualified native test tools",
+              "number": 7,
+              "startedAt": "2026-11-03T01:46:41Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:50Z",
+              "conclusion": "success",
+              "name": "Cache the declared optional Rust dependency for offline composition probes",
+              "number": 8,
+              "startedAt": "2026-11-03T01:46:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:29Z",
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "startedAt": "2026-11-03T01:46:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:29Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@v6",
+              "number": 15,
+              "startedAt": "2026-11-03T02:05:29Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:30Z",
+              "conclusion": "success",
+              "name": "Post Run pnpm/action-setup@v4",
+              "number": 16,
+              "startedAt": "2026-11-03T02:05:29Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:30Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 17,
+              "startedAt": "2026-11-03T02:05:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:30Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "startedAt": "2026-11-03T02:05:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:30Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "startedAt": "2026-11-03T02:05:30Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut/actions/runs/41561903710/job/125674225316"
+        },
+        {
+          "completedAt": "2026-11-03T02:05:24Z",
+          "conclusion": "success",
+          "databaseId": 125674225328,
+          "name": "Tests (Python 3.12)",
+          "startedAt": "2026-11-03T01:46:28Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T01:46:30Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T01:46:29Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:31Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T01:46:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:31Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T01:46:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:33Z",
+              "conclusion": "success",
+              "name": "Run pnpm/action-setup@v4",
+              "number": 4,
+              "startedAt": "2026-11-03T01:46:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:33Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@v6",
+              "number": 5,
+              "startedAt": "2026-11-03T01:46:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:36Z",
+              "conclusion": "success",
+              "name": "Materialize exact composition inputs",
+              "number": 6,
+              "startedAt": "2026-11-03T01:46:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:45Z",
+              "conclusion": "success",
+              "name": "Select the qualified native test tools",
+              "number": 7,
+              "startedAt": "2026-11-03T01:46:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:45Z",
+              "conclusion": "success",
+              "name": "Cache the declared optional Rust dependency for offline composition probes",
+              "number": 8,
+              "startedAt": "2026-11-03T01:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:19Z",
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "startedAt": "2026-11-03T01:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:20Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@v6",
+              "number": 15,
+              "startedAt": "2026-11-03T02:05:19Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:20Z",
+              "conclusion": "success",
+              "name": "Post Run pnpm/action-setup@v4",
+              "number": 16,
+              "startedAt": "2026-11-03T02:05:20Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:20Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 17,
+              "startedAt": "2026-11-03T02:05:20Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:20Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "startedAt": "2026-11-03T02:05:20Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:20Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "startedAt": "2026-11-03T02:05:20Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut/actions/runs/41561903710/job/125674225328"
+        },
+        {
+          "completedAt": "2026-11-03T01:58:48Z",
+          "conclusion": "success",
+          "databaseId": 125674225375,
+          "name": "Tests (Python 3.11)",
+          "startedAt": "2026-11-03T01:46:28Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T01:46:30Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T01:46:28Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:32Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T01:46:30Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:32Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T01:46:32Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:33Z",
+              "conclusion": "success",
+              "name": "Run pnpm/action-setup@v4",
+              "number": 4,
+              "startedAt": "2026-11-03T01:46:32Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:33Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@v6",
+              "number": 5,
+              "startedAt": "2026-11-03T01:46:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:37Z",
+              "conclusion": "success",
+              "name": "Materialize exact composition inputs",
+              "number": 6,
+              "startedAt": "2026-11-03T01:46:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:44Z",
+              "conclusion": "success",
+              "name": "Select the qualified native test tools",
+              "number": 7,
+              "startedAt": "2026-11-03T01:46:37Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:46:45Z",
+              "conclusion": "success",
+              "name": "Cache the declared optional Rust dependency for offline composition probes",
+              "number": 8,
+              "startedAt": "2026-11-03T01:46:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:58:44Z",
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "startedAt": "2026-11-03T01:46:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:58:44Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@v6",
+              "number": 15,
+              "startedAt": "2026-11-03T01:58:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:58:44Z",
+              "conclusion": "success",
+              "name": "Post Run pnpm/action-setup@v4",
+              "number": 16,
+              "startedAt": "2026-11-03T01:58:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:58:44Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 17,
+              "startedAt": "2026-11-03T01:58:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:58:44Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "startedAt": "2026-11-03T01:58:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:58:45Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "startedAt": "2026-11-03T01:58:44Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut/actions/runs/41561903710/job/125674225375"
+        },
+        {
+          "completedAt": "2026-11-03T02:05:51Z",
+          "conclusion": "success",
+          "databaseId": 125680729360,
+          "name": "Build sdist + wheel",
+          "startedAt": "2026-11-03T02:05:34Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:05:36Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:05:35Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:37Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T02:05:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:37Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T02:05:37Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:39Z",
+              "conclusion": "success",
+              "name": "Validate package metadata",
+              "number": 4,
+              "startedAt": "2026-11-03T02:05:37Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:47Z",
+              "conclusion": "success",
+              "name": "Build and check",
+              "number": 5,
+              "startedAt": "2026-11-03T02:05:39Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:47Z",
+              "conclusion": "success",
+              "name": "Smoke-test the wheel (import name + CLI entry point)",
+              "number": 6,
+              "startedAt": "2026-11-03T02:05:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:49Z",
+              "conclusion": "success",
+              "name": "Upload distributions",
+              "number": 7,
+              "startedAt": "2026-11-03T02:05:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:49Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 13,
+              "startedAt": "2026-11-03T02:05:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:49Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 14,
+              "startedAt": "2026-11-03T02:05:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:49Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 15,
+              "startedAt": "2026-11-03T02:05:49Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut/actions/runs/41561903710/job/125680729360"
+        },
+        {
+          "completedAt": "2026-11-03T02:06:13Z",
+          "conclusion": "success",
+          "databaseId": 125680844293,
+          "name": "Publish to PyPI",
+          "startedAt": "2026-11-03T02:05:54Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:05:56Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:05:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:57Z",
+              "conclusion": "success",
+              "name": "Download distributions",
+              "number": 2,
+              "startedAt": "2026-11-03T02:05:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:05:57Z",
+              "conclusion": "success",
+              "name": "List distributions",
+              "number": 3,
+              "startedAt": "2026-11-03T02:05:57Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:06:12Z",
+              "conclusion": "success",
+              "name": "Publish release distributions to PyPI",
+              "number": 4,
+              "startedAt": "2026-11-03T02:05:57Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:06:12Z",
+              "conclusion": "success",
+              "name": "Post Publish release distributions to PyPI",
+              "number": 8,
+              "startedAt": "2026-11-03T02:06:12Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:06:12Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "startedAt": "2026-11-03T02:06:12Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut/actions/runs/41561903710/job/125680844293"
+        }
+      ],
+      "url": "https://github.com/owebeeone/taut/actions/runs/41561903710"
+    },
+    "shape_python": {
+      "conclusion": "success",
+      "databaseId": 41564573410,
+      "headSha": "d33a069198c5540bfdd5b92b6ff22615d8113fa1",
+      "jobs": [
+        {
+          "completedAt": "2026-11-03T02:12:02Z",
+          "conclusion": "success",
+          "databaseId": 125682873261,
+          "name": "Tests (Python 3.13)",
+          "startedAt": "2026-11-03T02:11:43Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:11:44Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:11:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:45Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T02:11:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:46Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T02:11:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:46Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 4,
+              "startedAt": "2026-11-03T02:11:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:59Z",
+              "conclusion": "success",
+              "name": "Install and test",
+              "number": 5,
+              "startedAt": "2026-11-03T02:11:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:00Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 8,
+              "startedAt": "2026-11-03T02:11:59Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:00Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 9,
+              "startedAt": "2026-11-03T02:12:00Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:00Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 10,
+              "startedAt": "2026-11-03T02:12:00Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:00Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-03T02:12:00Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410/job/125682873261"
+        },
+        {
+          "completedAt": "2026-11-03T02:11:58Z",
+          "conclusion": "success",
+          "databaseId": 125682873451,
+          "name": "Tests (Python 3.11)",
+          "startedAt": "2026-11-03T02:11:43Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:11:44Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:11:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:45Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T02:11:44Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:46Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T02:11:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:46Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 4,
+              "startedAt": "2026-11-03T02:11:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:56Z",
+              "conclusion": "success",
+              "name": "Install and test",
+              "number": 5,
+              "startedAt": "2026-11-03T02:11:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:56Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 8,
+              "startedAt": "2026-11-03T02:11:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:56Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 9,
+              "startedAt": "2026-11-03T02:11:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:56Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 10,
+              "startedAt": "2026-11-03T02:11:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:56Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-03T02:11:56Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410/job/125682873451"
+        },
+        {
+          "completedAt": "2026-11-03T02:12:07Z",
+          "conclusion": "success",
+          "databaseId": 125682873529,
+          "name": "Tests (Python 3.12)",
+          "startedAt": "2026-11-03T02:11:48Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:11:49Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:11:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:51Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T02:11:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:52Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T02:11:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:53Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 4,
+              "startedAt": "2026-11-03T02:11:52Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:03Z",
+              "conclusion": "success",
+              "name": "Install and test",
+              "number": 5,
+              "startedAt": "2026-11-03T02:11:53Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:04Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 8,
+              "startedAt": "2026-11-03T02:12:03Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:04Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 9,
+              "startedAt": "2026-11-03T02:12:04Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:04Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 10,
+              "startedAt": "2026-11-03T02:12:04Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:04Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-03T02:12:04Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410/job/125682873529"
+        },
+        {
+          "completedAt": "2026-11-03T02:12:11Z",
+          "conclusion": "success",
+          "databaseId": 125682873590,
+          "name": "Tests (Python 3.10)",
+          "startedAt": "2026-11-03T02:11:43Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:11:46Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:11:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:47Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T02:11:46Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:48Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T02:11:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:11:49Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 4,
+              "startedAt": "2026-11-03T02:11:48Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:09Z",
+              "conclusion": "success",
+              "name": "Install and test",
+              "number": 5,
+              "startedAt": "2026-11-03T02:11:49Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:09Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 8,
+              "startedAt": "2026-11-03T02:12:09Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:09Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 9,
+              "startedAt": "2026-11-03T02:12:09Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:09Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 10,
+              "startedAt": "2026-11-03T02:12:09Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:09Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-03T02:12:09Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410/job/125682873590"
+        },
+        {
+          "completedAt": "2026-11-03T02:12:33Z",
+          "conclusion": "success",
+          "databaseId": 125683047356,
+          "name": "Build and smoke-test distributions",
+          "startedAt": "2026-11-03T02:12:13Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:12:15Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:12:14Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:16Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T02:12:15Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:16Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T02:12:16Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:28Z",
+              "conclusion": "success",
+              "name": "Build and check",
+              "number": 4,
+              "startedAt": "2026-11-03T02:12:16Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:29Z",
+              "conclusion": "success",
+              "name": "Smoke-test wheel",
+              "number": 5,
+              "startedAt": "2026-11-03T02:12:28Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:31Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@v7",
+              "number": 6,
+              "startedAt": "2026-11-03T02:12:29Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:31Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v6",
+              "number": 11,
+              "startedAt": "2026-11-03T02:12:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:31Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 12,
+              "startedAt": "2026-11-03T02:12:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:31Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 13,
+              "startedAt": "2026-11-03T02:12:31Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410/job/125683047356"
+        },
+        {
+          "completedAt": "2026-11-03T02:12:57Z",
+          "conclusion": "success",
+          "databaseId": 125683178476,
+          "name": "Publish to PyPI",
+          "startedAt": "2026-11-03T02:12:36Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T02:12:38Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T02:12:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:39Z",
+              "conclusion": "success",
+              "name": "Run actions/download-artifact@v8",
+              "number": 2,
+              "startedAt": "2026-11-03T02:12:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:55Z",
+              "conclusion": "success",
+              "name": "Run pypa/gh-action-pypi-publish@release/v1",
+              "number": 3,
+              "startedAt": "2026-11-03T02:12:39Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:55Z",
+              "conclusion": "success",
+              "name": "Post Run pypa/gh-action-pypi-publish@release/v1",
+              "number": 6,
+              "startedAt": "2026-11-03T02:12:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T02:12:55Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 7,
+              "startedAt": "2026-11-03T02:12:55Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410/job/125683178476"
+        }
+      ],
+      "url": "https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410"
+    },
+    "shape_rust": {
+      "conclusion": "success",
+      "databaseId": 41558306131,
+      "headSha": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+      "jobs": [
+        {
+          "completedAt": "2026-11-03T01:14:47Z",
+          "conclusion": "success",
+          "databaseId": 125662506976,
+          "name": "Test crate",
+          "startedAt": "2026-11-03T01:13:33Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T01:13:34Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T01:13:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:13:35Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T01:13:34Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:13:36Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T01:13:35Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:13:36Z",
+              "conclusion": "success",
+              "name": "Run rustup component add clippy",
+              "number": 4,
+              "startedAt": "2026-11-03T01:13:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:31Z",
+              "conclusion": "success",
+              "name": "Run cargo test --workspace --locked",
+              "number": 5,
+              "startedAt": "2026-11-03T01:13:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:39Z",
+              "conclusion": "success",
+              "name": "Run cargo clippy --workspace --all-targets --locked -- -D warnings",
+              "number": 6,
+              "startedAt": "2026-11-03T01:14:31Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:41Z",
+              "conclusion": "success",
+              "name": "Run cargo build -p taut-shape --no-default-features --locked",
+              "number": 7,
+              "startedAt": "2026-11-03T01:14:39Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:45Z",
+              "conclusion": "success",
+              "name": "Run cargo package -p taut-shape --locked",
+              "number": 8,
+              "startedAt": "2026-11-03T01:14:41Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:45Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 15,
+              "startedAt": "2026-11-03T01:14:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:45Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 16,
+              "startedAt": "2026-11-03T01:14:45Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:45Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 17,
+              "startedAt": "2026-11-03T01:14:45Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-rs/actions/runs/41558306131/job/125662506976"
+        },
+        {
+          "completedAt": "2026-11-03T01:15:01Z",
+          "conclusion": "success",
+          "databaseId": 125662970538,
+          "name": "Publish to crates.io",
+          "startedAt": "2026-11-03T01:14:49Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T01:14:51Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T01:14:50Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:52Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-03T01:14:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:52Z",
+              "conclusion": "success",
+              "name": "Require tag/crate version agreement",
+              "number": 3,
+              "startedAt": "2026-11-03T01:14:52Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:53Z",
+              "conclusion": "success",
+              "name": "Exchange the OIDC token for a crates.io token",
+              "number": 4,
+              "startedAt": "2026-11-03T01:14:52Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:58Z",
+              "conclusion": "success",
+              "name": "Publish if this immutable version is absent",
+              "number": 5,
+              "startedAt": "2026-11-03T01:14:53Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:58Z",
+              "conclusion": "success",
+              "name": "Post Exchange the OIDC token for a crates.io token",
+              "number": 9,
+              "startedAt": "2026-11-03T01:14:58Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:58Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 10,
+              "startedAt": "2026-11-03T01:14:58Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:14:58Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 11,
+              "startedAt": "2026-11-03T01:14:58Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-rs/actions/runs/41558306131/job/125662970538"
+        }
+      ],
+      "url": "https://github.com/owebeeone/taut-shape-rs/actions/runs/41558306131"
+    },
+    "shape_typescript": {
+      "conclusion": "success",
+      "databaseId": 41537841200,
+      "headSha": "79d3899b91af843b2295d089c82f6547ef97fde8",
+      "jobs": [
+        {
+          "completedAt": "2026-11-02T22:31:12Z",
+          "conclusion": "success",
+          "databaseId": 125594132979,
+          "name": "Test package",
+          "startedAt": "2026-11-02T22:30:32Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-02T22:30:34Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-02T22:30:33Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:35Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-02T22:30:34Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:36Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 3,
+              "startedAt": "2026-11-02T22:30:35Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:38Z",
+              "conclusion": "success",
+              "name": "Run pnpm/action-setup@v4",
+              "number": 4,
+              "startedAt": "2026-11-02T22:30:36Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:39Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@v6",
+              "number": 5,
+              "startedAt": "2026-11-02T22:30:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:40Z",
+              "conclusion": "success",
+              "name": "Run pnpm install --frozen-lockfile",
+              "number": 6,
+              "startedAt": "2026-11-02T22:30:39Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:43Z",
+              "conclusion": "success",
+              "name": "Run pnpm typecheck",
+              "number": 7,
+              "startedAt": "2026-11-02T22:30:40Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:47Z",
+              "conclusion": "success",
+              "name": "Run pnpm test",
+              "number": 8,
+              "startedAt": "2026-11-02T22:30:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:51Z",
+              "conclusion": "success",
+              "name": "Run pnpm build",
+              "number": 9,
+              "startedAt": "2026-11-02T22:30:47Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:57Z",
+              "conclusion": "success",
+              "name": "Smoke-test packed consumer install",
+              "number": 10,
+              "startedAt": "2026-11-02T22:30:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:59Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@v6",
+              "number": 17,
+              "startedAt": "2026-11-02T22:30:57Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:59Z",
+              "conclusion": "success",
+              "name": "Post Run pnpm/action-setup@v4",
+              "number": 18,
+              "startedAt": "2026-11-02T22:30:59Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:59Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 19,
+              "startedAt": "2026-11-02T22:30:59Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:59Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 20,
+              "startedAt": "2026-11-02T22:30:59Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:30:59Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 21,
+              "startedAt": "2026-11-02T22:30:59Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-ts/actions/runs/41537841200/job/125594132979"
+        },
+        {
+          "completedAt": "2026-11-02T22:31:51Z",
+          "conclusion": "success",
+          "databaseId": 125594488524,
+          "name": "Publish to npm",
+          "startedAt": "2026-11-02T22:31:15Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-02T22:31:17Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-02T22:31:16Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:18Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "startedAt": "2026-11-02T22:31:17Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:20Z",
+              "conclusion": "success",
+              "name": "Run pnpm/action-setup@v4",
+              "number": 3,
+              "startedAt": "2026-11-02T22:31:18Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:20Z",
+              "conclusion": "success",
+              "name": "Run actions/setup-node@v6",
+              "number": 4,
+              "startedAt": "2026-11-02T22:31:20Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:21Z",
+              "conclusion": "success",
+              "name": "Run pnpm install --frozen-lockfile",
+              "number": 5,
+              "startedAt": "2026-11-02T22:31:20Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:26Z",
+              "conclusion": "success",
+              "name": "Select an npm CLI with trusted-publishing support",
+              "number": 6,
+              "startedAt": "2026-11-02T22:31:21Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:26Z",
+              "conclusion": "success",
+              "name": "Require tag/package version agreement",
+              "number": 7,
+              "startedAt": "2026-11-02T22:31:26Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:38Z",
+              "conclusion": "success",
+              "name": "Publish if this immutable version is absent",
+              "number": 8,
+              "startedAt": "2026-11-02T22:31:26Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:38Z",
+              "conclusion": "success",
+              "name": "Post Run actions/setup-node@v6",
+              "number": 14,
+              "startedAt": "2026-11-02T22:31:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:38Z",
+              "conclusion": "success",
+              "name": "Post Run pnpm/action-setup@v4",
+              "number": 15,
+              "startedAt": "2026-11-02T22:31:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:39Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 16,
+              "startedAt": "2026-11-02T22:31:38Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-02T22:31:39Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 17,
+              "startedAt": "2026-11-02T22:31:39Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-ts/actions/runs/41537841200/job/125594488524"
+        }
+      ],
+      "url": "https://github.com/owebeeone/taut-shape-ts/actions/runs/41537841200"
+    },
+    "foundation": {
+      "conclusion": "success",
+      "databaseId": 41536859807,
+      "headSha": "506b60ef059208c9dd7a1d85fa6df4deb8824577",
+      "jobs": [
+        {
+          "completedAt": "2026-11-03T01:06:59Z",
+          "conclusion": "success",
+          "databaseId": 125659945739,
+          "name": "foundation",
+          "startedAt": "2026-11-03T01:06:40Z",
+          "status": "completed",
+          "steps": [
+            {
+              "completedAt": "2026-11-03T01:06:42Z",
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "startedAt": "2026-11-03T01:06:41Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:42Z",
+              "conclusion": "success",
+              "name": "Require explicit immutable input",
+              "number": 2,
+              "startedAt": "2026-11-03T01:06:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:42Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 3,
+              "startedAt": "2026-11-03T01:06:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:43Z",
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 4,
+              "startedAt": "2026-11-03T01:06:42Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:51Z",
+              "conclusion": "success",
+              "name": "Select the qualified Rust release toolchain",
+              "number": 5,
+              "startedAt": "2026-11-03T01:06:43Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:51Z",
+              "conclusion": "success",
+              "name": "Verify source, canonical payload and release identity",
+              "number": 6,
+              "startedAt": "2026-11-03T01:06:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:52Z",
+              "conclusion": "success",
+              "name": "Test both feature modes and isolated registry payload",
+              "number": 7,
+              "startedAt": "2026-11-03T01:06:51Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:52Z",
+              "conclusion": "skipped",
+              "name": "Require bootstrap credential presence",
+              "number": 8,
+              "startedAt": "2026-11-03T01:06:52Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:55Z",
+              "conclusion": "success",
+              "name": "Publish initial foundation through the existing registry environment",
+              "number": 9,
+              "startedAt": "2026-11-03T01:06:52Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:56Z",
+              "conclusion": "success",
+              "name": "Run actions/upload-artifact@v7",
+              "number": 10,
+              "startedAt": "2026-11-03T01:06:55Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:56Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 19,
+              "startedAt": "2026-11-03T01:06:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:57Z",
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 20,
+              "startedAt": "2026-11-03T01:06:56Z",
+              "status": "completed"
+            },
+            {
+              "completedAt": "2026-11-03T01:06:57Z",
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 21,
+              "startedAt": "2026-11-03T01:06:57Z",
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/owebeeone/taut-shape-rs/actions/runs/41536859807/job/125659945739"
+        }
+      ],
+      "url": "https://github.com/owebeeone/taut-shape-rs/actions/runs/41536859807/attempts/2"
+    }
+  },
+  "final_source_proof": {
+    "status": "PASS",
+    "as_of_root": "5767b2d2b9772a62a5889f5d31cfc90778163f88",
+    "published_sources": {
+      "taut": "0258b49e92c8b4ccd95027b4b10ad0b2f3992c52",
+      "taut-shape-py": "d33a069198c5540bfdd5b92b6ff22615d8113fa1",
+      "taut-shape-rs": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+      "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8"
+    },
+    "future_ci_heads": {
+      "taut": "fcfbe0cfface9241c2b68542973936a166a0c8bc",
+      "taut-shape-py": "0488516aa1a5db94da44fdb10f12a7ec5bfd5940"
+    },
+    "all_nine_member_heads": {
+      "taut": "fcfbe0cfface9241c2b68542973936a166a0c8bc",
+      "taut-shape-py": "0488516aa1a5db94da44fdb10f12a7ec5bfd5940",
+      "taut-shape-rs": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+      "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8",
+      "taut-shape": "89916c4d017123d7c16f094eb2fba6ece98facc0",
+      "glade": "491dda9645a3ef76b6c1632fbb6bddef926e40a7",
+      "glade-decl-ts": "f1b7492f3a970a8af25415356c3fb62db40c4a15",
+      "glial": "6a9a9e216629ccdd6b57aa0c66436d5fa7e0e654",
+      "grip-core": "b9d7149a1c3748ad2b4490d9d70ca23ee121268f"
+    },
+    "future_ci_delta": "Each Python repository changes only the one matrix line, adding 3.15; all other bytes match its published source.",
+    "immutable_compiler_release_raw_blobs_verified": 984,
+    "qualified_release_tree": "1773963420ab5be7aab1323865f09066ae2e65d84a0fe96a6caef1049cd211ca",
+    "preserved_untracked_files": 35,
+    "protected_author_files": 5,
+    "enum_case_ancestor": true,
+    "retained_stashes": [
+      "23d45758f2a73de865dacc2ebc68e6dc9ef22ed6",
+      "54d964b91a674fd86aeb860cf4b43c53f1dd87d0",
+      "cad981df4cabc771c91c0530db0f2bcd90caa263"
+    ],
+    "unrelated_and_contract_members_unchanged": true,
+    "tracked_member_changes": 0,
+    "expected_dirty_state": "Taut has exactly35 preserved untracked artifacts; other members are clean."
+  },
+  "temporary_crates_environment_secrets": [],
+  "credential_revoked": "Confirmed by human; never retrieve or reuse.",
+  "evidence_files": {
+    "public-artifact-verification.json": {
+      "sha256": "207432270ccae011d08e9a49490c3881ff900a076e962a7fb82a12bda47b5bfd",
+      "bytes": 3527
+    },
+    "registry-consumers/RESULTS.json": {
+      "sha256": "9406cba0da0ff51b40c98a52b5781e28b09e9c5a48b200a70ff4c407571d3d25",
+      "bytes": 10090
+    },
+    "final-release-proof.json": {
+      "sha256": "4d5553a922b579117fa6241387a18bcf0eb3dae3f132cc10e6600d77968d607f",
+      "bytes": 1881
+    },
+    "planned-registry-state.json": {
+      "sha256": "4b5272aa2370a0d27f92a0bf728b099a2dc05420ff1f801a4408e55b856902e0",
+      "bytes": 661
+    },
+    "python315-checks-retry/RESULTS.json": {
+      "sha256": "26b9072f0e2dd34d33378f8cfa1f0594f160274efa3785ab6d7d1f7d99eb6e26",
+      "bytes": 5742
+    },
+    "python315-checks-retry/taut.xml": {
+      "sha256": "d376017b47aec0e6bcc30fff62802d6ad426477e2b339b761d63616b5d7c3770",
+      "bytes": 146070
+    },
+    "python315-checks-retry/shape.xml": {
+      "sha256": "e1b00010a5adad95abdc6fa914f7bff644f4b6e8c8efa785da10616707496e52",
+      "bytes": 21601
+    }
+  },
+  "scratch": "D:\\projects\\limbo\\coordinated-release-2026-11-03",
+  "python315_initial_attempt": "FileNotFoundError in pytest capture storage prevented collection. Failed attempt retained at python315-checks/commands.log. Retry used dedicated /var/tmp and passed; no product change was needed."
+}

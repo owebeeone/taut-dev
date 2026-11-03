@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "as_of_root": "5767b2d2b9772a62a5889f5d31cfc90778163f88",
+  "published_sources": {
+    "taut": "0258b49e92c8b4ccd95027b4b10ad0b2f3992c52",
+    "taut-shape-py": "d33a069198c5540bfdd5b92b6ff22615d8113fa1",
+    "taut-shape-rs": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+    "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8"
+  },
+  "future_ci_heads": {
+    "taut": "fcfbe0cfface9241c2b68542973936a166a0c8bc",
+    "taut-shape-py": "0488516aa1a5db94da44fdb10f12a7ec5bfd5940"
+  },
+  "all_nine_member_heads": {
+    "taut": "fcfbe0cfface9241c2b68542973936a166a0c8bc",
+    "taut-shape-py": "0488516aa1a5db94da44fdb10f12a7ec5bfd5940",
+    "taut-shape-rs": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+    "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8",
+    "taut-shape": "89916c4d017123d7c16f094eb2fba6ece98facc0",
+    "glade": "491dda9645a3ef76b6c1632fbb6bddef926e40a7",
+    "glade-decl-ts": "f1b7492f3a970a8af25415356c3fb62db40c4a15",
+    "glial": "6a9a9e216629ccdd6b57aa0c66436d5fa7e0e654",
+    "grip-core": "b9d7149a1c3748ad2b4490d9d70ca23ee121268f"
+  },
+  "future_ci_delta": "Each Python repository changes only the one matrix line, adding 3.15; all other bytes match its published source.",
+  "immutable_compiler_release_raw_blobs_verified": 984,
+  "qualified_release_tree": "1773963420ab5be7aab1323865f09066ae2e65d84a0fe96a6caef1049cd211ca",
+  "preserved_untracked_files": 35,
+  "protected_author_files": 5,
+  "enum_case_ancestor": true,
+  "retained_stashes": [
+    "23d45758f2a73de865dacc2ebc68e6dc9ef22ed6",
+    "54d964b91a674fd86aeb860cf4b43c53f1dd87d0",
+    "cad981df4cabc771c91c0530db0f2bcd90caa263"
+  ],
+  "unrelated_and_contract_members_unchanged": true,
+  "tracked_member_changes": 0,
+  "expected_dirty_state": "Taut has exactly35 preserved untracked artifacts; other members are clean."
+}

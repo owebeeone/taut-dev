@@ -1,3 +1,6 @@
+> Historical partial boundary: this document records an earlier state.
+> All five packages are now public; see CoordinatedMinorRelease-Completion.md.
+
 # Coordinated release publication boundary
 
 The release is partially published. TypeScript0.11.0 is public; Taut's immutable

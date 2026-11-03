@@ -1,0 +1,298 @@
+{
+  "status": "PASS",
+  "version": "0.11.0",
+  "compiler_version": "0.11.1",
+  "commands": [
+    {
+      "args": [
+        "uv",
+        "venv",
+        "--seed",
+        "--python",
+        "3.13.5",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--index-url",
+        "https://pypi.org/simple",
+        "--report",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\pypi-install.json",
+        "taut-proto==0.11.1",
+        "taut-shape==0.11.0"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\tautc.exe",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\python-off",
+        "--lang",
+        "python",
+        "--runtime",
+        "package"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\python.exe",
+        "-I",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\python-off\\app.py",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\python-off\\python",
+        "off"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\tautc.exe",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\python-on",
+        "--lang",
+        "python",
+        "--runtime",
+        "package",
+        "--with-validation"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\python.exe",
+        "-I",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\python-on\\app.py",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\python-on\\python",
+        "on"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\tautc.exe",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\rust-off",
+        "--lang",
+        "rust",
+        "--runtime",
+        "package"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "cargo",
+        "run",
+        "--manifest-path",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\rust-off\\Cargo.toml",
+        "--bin",
+        "consume"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "cargo",
+        "metadata",
+        "--format-version",
+        "1",
+        "--manifest-path",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\rust-off\\Cargo.toml"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\tautc.exe",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\rust-on",
+        "--lang",
+        "rust",
+        "--runtime",
+        "package",
+        "--with-validation"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "cargo",
+        "run",
+        "--manifest-path",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\rust-on\\Cargo.toml",
+        "--bin",
+        "consume"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "cargo",
+        "metadata",
+        "--format-version",
+        "1",
+        "--manifest-path",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\rust-on\\Cargo.toml"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "C:\\Program Files\\nodejs\\npm.CMD",
+        "install",
+        "--registry=https://registry.npmjs.org",
+        "--ignore-scripts"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\tautc.exe",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\off",
+        "--lang",
+        "typescript",
+        "--runtime",
+        "package",
+        "--runtime-bindings",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\bindings.json"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\node_modules\\typescript\\bin\\tsc",
+        "--target",
+        "ES2022",
+        "--module",
+        "NodeNext",
+        "--moduleResolution",
+        "NodeNext",
+        "--strict",
+        "--skipLibCheck",
+        "--rewriteRelativeImportExtensions",
+        "--rootDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\off",
+        "--outDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\off\\built",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\off\\main.ts"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm",
+      "exit": 0
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\off\\built\\main.js"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm",
+      "exit": 0
+    },
+    {
+      "args": [
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\venv\\Scripts\\tautc.exe",
+        "gen",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\content.taut.py",
+        "-o",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\on",
+        "--lang",
+        "typescript",
+        "--runtime",
+        "package",
+        "--runtime-bindings",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\bindings.json",
+        "--with-validation"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers",
+      "exit": 0
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\node_modules\\typescript\\bin\\tsc",
+        "--target",
+        "ES2022",
+        "--module",
+        "NodeNext",
+        "--moduleResolution",
+        "NodeNext",
+        "--strict",
+        "--skipLibCheck",
+        "--rewriteRelativeImportExtensions",
+        "--rootDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\on",
+        "--outDir",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\on\\built",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\on\\main.ts"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm",
+      "exit": 0
+    },
+    {
+      "args": [
+        "node",
+        "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm\\on\\built\\main.js"
+      ],
+      "cwd": "D:\\projects\\limbo\\coordinated-release-2026-11-03\\registry-consumers\\npm",
+      "exit": 0
+    }
+  ],
+  "schema_sha256": "2d8849575d005fe81ebeeab9f6136d26c7d0fd5edac50aca5faf6a76a4c38c40",
+  "python_modes": [
+    "off",
+    "on"
+  ],
+  "rust_modes": [
+    "off",
+    "on"
+  ],
+  "npm_modes": [
+    "off",
+    "on"
+  ],
+  "npm_dual_module_owner": true,
+  "npm_artifact": {
+    "version": "0.11.0",
+    "resolved": "https://registry.npmjs.org/@owebeeone/taut-shape/-/taut-shape-0.11.0.tgz",
+    "integrity": "sha512-QYJ72XrQi8SO8QMWuy2pysxlgizvzcHecF8O4X779/SOia2Kg0f3u2AXnq2ldAE9PTeUNkVpinDJaWAUuY9GJw==",
+    "license": "MIT",
+    "bin": {
+      "taut-shape-tool": "dist/cli.js"
+    },
+    "engines": {
+      "node": ">=22"
+    }
+  }
+}

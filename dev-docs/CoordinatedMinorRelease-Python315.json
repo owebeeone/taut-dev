@@ -1,0 +1,172 @@
+{
+  "status": "PASS",
+  "runtime": "3.15.2 (main, Oct 26 2026, 14:38:56) [GCC 13.3.0]\n/var/tmp/taut-release-python315-20261103\nOpenSSL 3.0.13 30 Jan 2024\n",
+  "official_asset": {
+    "browser_download_url": "https://github.com/actions/python-versions/releases/download/3.15.2-40340363276/python-3.15.2-linux-24.04-x64.tar.gz",
+    "digest": "sha256:a945ca657bf4efeac7483c0c82381448d3b651a8d0e49be421c71fd53085cd01",
+    "name": "python-3.15.2-linux-24.04-x64.tar.gz",
+    "size": 118469091
+  },
+  "scope": "Linux 24.04 local Python 3.15.2: selected Taut Python-facing tests, entire Python shape suite, fresh public compiler/runtime OFF/ON generation and execution. Hosted 3.15 matrix has not run.",
+  "taut_test_files": [
+    "dsl",
+    "ir_v2",
+    "oneof",
+    "bounds",
+    "cbor",
+    "jsoncodec",
+    "validate",
+    "options",
+    "options_validate",
+    "python_parity",
+    "python_runtime_distribution",
+    "compat",
+    "forward_compat",
+    "reserved",
+    "reserved_names",
+    "map",
+    "float",
+    "shapes"
+  ],
+  "commands": [
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-20261103/bin/python3.15",
+        "-c",
+        "import sys,ssl; print(sys.version); print(sys.prefix); print(ssl.OPENSSL_VERSION)"
+      ],
+      "cwd": "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-20261103/bin/python3.15",
+        "-m",
+        "venv",
+        "/var/tmp/taut-release-python315-venv-20261103"
+      ],
+      "cwd": "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-venv-20261103/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--report",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/pypi-install.json",
+        "taut-proto==0.11.1",
+        "taut-shape==0.11.0",
+        "pytest==9.1.1",
+        "syrupy",
+        "setuptools-scm",
+        "build",
+        "twine"
+      ],
+      "cwd": "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-venv-20261103/bin/python",
+        "-c",
+        "from taut.cli import main; main()",
+        "gen",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/registry-consumers/content.taut.py",
+        "-o",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/python-off",
+        "--lang",
+        "python",
+        "--runtime",
+        "package"
+      ],
+      "cwd": "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-venv-20261103/bin/python",
+        "-I",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/python-off/app.py",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/python-off/python",
+        "off"
+      ],
+      "cwd": "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-venv-20261103/bin/python",
+        "-c",
+        "from taut.cli import main; main()",
+        "gen",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/registry-consumers/content.taut.py",
+        "-o",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/python-on",
+        "--lang",
+        "python",
+        "--runtime",
+        "package",
+        "--with-validation"
+      ],
+      "cwd": "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-venv-20261103/bin/python",
+        "-I",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/python-on/app.py",
+        "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/python-on/python",
+        "on"
+      ],
+      "cwd": "/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-venv-20261103/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/taut.xml",
+        "src/tests/test_dsl.py",
+        "src/tests/test_ir_v2.py",
+        "src/tests/test_oneof.py",
+        "src/tests/test_bounds.py",
+        "src/tests/test_cbor.py",
+        "src/tests/test_jsoncodec.py",
+        "src/tests/test_validate.py",
+        "src/tests/test_options.py",
+        "src/tests/test_options_validate.py",
+        "src/tests/test_python_parity.py",
+        "src/tests/test_python_runtime_distribution.py",
+        "src/tests/test_compat.py",
+        "src/tests/test_forward_compat.py",
+        "src/tests/test_reserved.py",
+        "src/tests/test_reserved_names.py",
+        "src/tests/test_map.py",
+        "src/tests/test_float.py",
+        "src/tests/test_shapes.py"
+      ],
+      "cwd": "/mnt/d/projects/limbo/taut-dev/taut",
+      "exit": 0
+    },
+    {
+      "args": [
+        "/var/tmp/taut-release-python315-venv-20261103/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=/mnt/d/projects/limbo/coordinated-release-2026-11-03/python315-checks-retry/shape.xml"
+      ],
+      "cwd": "/mnt/d/projects/limbo/taut-dev/taut-shape-py",
+      "exit": 0
+    }
+  ]
+}

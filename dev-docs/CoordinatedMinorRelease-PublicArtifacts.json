@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "runtime_version": "0.11.0",
+  "compiler_version": "0.11.1",
+  "crates": {
+    "taut-foundation": {
+      "checksum": "63ac99ac22bb0e5e9d645bf1f49cc4ff974d82c05219f72b83c9f03cb93375ef",
+      "source_sha": "9260da45f486ed5a57aa399788c2936f2c044619",
+      "payload_files": 12,
+      "all_payload_bytes_equal_to_exact_local_package": true,
+      "local_archive_checksum": "09e917939e4edb5890f55a3e67d23653c4d9c91a1ad048eeb4eb47526c93a2f8",
+      "trusted_publisher_provenance": null
+    },
+    "taut-shape": {
+      "checksum": "51725134e5b6b6f160602c718cd6869ab3848e61cfc362a1a1933c65f77a45be",
+      "source_sha": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+      "payload_files": 31,
+      "all_payload_bytes_equal_to_exact_local_package": true,
+      "local_archive_checksum": "51725134e5b6b6f160602c718cd6869ab3848e61cfc362a1a1933c65f77a45be",
+      "trusted_publisher_provenance": {
+        "provider": "github",
+        "repository": "owebeeone/taut-shape-rs",
+        "run_id": "41558306131",
+        "sha": "7f2a60747901fcf15362ab3c9a8af65c20faad68"
+      }
+    }
+  },
+  "pypi": {
+    "taut-proto": {
+      "files": [
+        {
+          "filename": "taut_proto-0.11.1-py3-none-any.whl",
+          "sha256": "a95d06d3771ad00f764b412497f5b8ffcc026ca209234c97a67af748a53b1046",
+          "url": "https://files.pythonhosted.org/packages/74/a9/018fa884d0fcdcfb2a7f421f9da7979e0d9edfc97fedf7d88bc2769db311/taut_proto-0.11.1-py3-none-any.whl",
+          "kind": "bdist_wheel"
+        },
+        {
+          "filename": "taut_proto-0.11.1.tar.gz",
+          "sha256": "774f725168c472a7eec7dca063736cd9be17861f585c4bd6717a44c65fe7f7e3",
+          "url": "https://files.pythonhosted.org/packages/4b/0f/cedf830fa24dad4508380408cda1e02877a5afed7e4e0809ec3d190658de/taut_proto-0.11.1.tar.gz",
+          "kind": "sdist"
+        }
+      ],
+      "matches_workflow_distribution_artifacts": true,
+      "requires_python": ">=3.10",
+      "requires_dist": null
+    },
+    "taut-shape": {
+      "files": [
+        {
+          "filename": "taut_shape-0.11.0-py3-none-any.whl",
+          "sha256": "0ad32736c67fc0808195b7211dc4fd09f4984b9b1be39d98a8f2cdb69caa8bb0",
+          "url": "https://files.pythonhosted.org/packages/85/29/ae45d5085c59032f46375c99f35c8c915df27e34bed48889f95edbe60444/taut_shape-0.11.0-py3-none-any.whl",
+          "kind": "bdist_wheel"
+        },
+        {
+          "filename": "taut_shape-0.11.0.tar.gz",
+          "sha256": "165c5396ec7eebd357e08bbd0ead808a02613226a3d280095317d1d3b747eb58",
+          "url": "https://files.pythonhosted.org/packages/6c/10/df2777656b7e1aeeb61fcac9e962027028ae97328ea4432b8d30a96d7a5f/taut_shape-0.11.0.tar.gz",
+          "kind": "sdist"
+        }
+      ],
+      "matches_workflow_distribution_artifacts": true,
+      "requires_python": ">=3.10",
+      "requires_dist": [
+        "taut-proto<0.12,>=0.11.0",
+        "pytest; extra == \"dev\"",
+        "syrupy; extra == \"dev\"",
+        "ruff; extra == \"dev\"",
+        "mypy; extra == \"dev\""
+      ]
+    }
+  },
+  "npm": {
+    "package": "@owebeeone/taut-shape",
+    "version": "0.11.0",
+    "source_sha": "79d3899b91af843b2295d089c82f6547ef97fde8",
+    "shasum": "e0e12d536e4abaa4b91f489d059e1ed92ee30f8b",
+    "integrity": "sha512-QYJ72XrQi8SO8QMWuy2pysxlgizvzcHecF8O4X779/SOia2Kg0f3u2AXnq2ldAE9PTeUNkVpinDJaWAUuY9GJw==",
+    "tarball": "https://registry.npmjs.org/@owebeeone/taut-shape/-/taut-shape-0.11.0.tgz"
+  }
+}

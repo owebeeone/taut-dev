@@ -1,71 +1,99 @@
-# Coordinated 0.11.0 release completion
+# Coordinated minor release completion
 
-Status: **publication in progress**. This continues the accepted DRAFT and
-partial boundary at root feafa8168aa31407f019bf0c05fd8784f23aa31a. Historical
-partial-boundary receipts remain historical evidence, not current absence claims.
+Status: **all five intended artifacts are public, all five publication workflows
+terminated SUCCESS, and fresh public registry consumers passed**. Final receipt
+and future-CI acceptance are pending the two original reviewers and final GWZ push.
+This is the current execution record; PublicationBoundary.md describes an earlier
+partial boundary only. Historical reviews and qualifications retain their original scope.
 
-## Bootstrap completed
+| Public artifact | Version | Immutable source | Successful workflow |
+|---|---|---|---|
+| PyPI `taut-proto` | 0.11.1 | `0258b49e92c8b4ccd95027b4b10ad0b2f3992c52` | [41561903710](https://github.com/owebeeone/taut/actions/runs/41561903710) |
+| PyPI `taut-shape` | 0.11.0 | `d33a069198c5540bfdd5b92b6ff22615d8113fa1` | [41564573410](https://github.com/owebeeone/taut-shape-py/actions/runs/41564573410) |
+| crates.io `taut-foundation` | 0.11.0 | `9260da45f486ed5a57aa399788c2936f2c044619` | [41536859807 attempt2](https://github.com/owebeeone/taut-shape-rs/actions/runs/41536859807/attempts/2) |
+| crates.io `taut-shape` | 0.11.0 | `7f2a60747901fcf15362ab3c9a8af65c20faad68` | [41558306131](https://github.com/owebeeone/taut-shape-rs/actions/runs/41558306131) |
+| npm `@owebeeone/taut-shape` | 0.11.0 | `79d3899b91af843b2295d089c82f6547ef97fde8` | [41537841200](https://github.com/owebeeone/taut-shape-ts/actions/runs/41537841200) |
 
-The human supplied a temporary foundation bootstrap credential and expressly
-authorized the authenticated local route and non-echoing stdin. No credential
-literal was put in code, shell arguments, files, stdout or this receipt. The
-temporary GitHub environment secret was removed after success. The human has
-confirmed revocation of the temporary crates.io token. Do not retrieve/reuse it.
-Rust shape's release.yml trusted-publisher-only/OIDC route remains unchanged.
+## Qualification and public consumers
 
-Foundation workflow41536859807 attempt2 terminated SUCCESS at reviewed publisher
-506b60ef059208c9dd7a1d85fa6df4deb8824577, immutable Taut source/tag
-9260da45f486ed5a57aa399788c2936f2c044619/v0.11.0. Public registry checksum:
-63ac99ac22bb0e5e9d645bf1f49cc4ff974d82c05219f72b83c9f03cb93375ef.
-The workflow's uploaded archive exactly equals that registry checksum. Independent
-local repack comparison verifies all12 entry names, sizes and payload bytes plus
-clean VCS SHA. Local compressed archive bytes differ; their checksum is recorded
-separately, not equated to the registry archive. See FoundationWorkflow.json and
-FoundationIndependent.json. No duplicate upload or tag replacement occurred.
+Compiler 0.11.1's exact Gearu candidate passed all 2566 required cases
+(2562 native plus4 POSIX), zero failures/skips/omissions, with2574 collected
+including8 separately accounted parity wrappers. All16 actual parity variants
+passed88 rows each. Package build,132-file smoke and984 raw Git blob checks
+passed for immutable source0258b49 and qualified tree
+1773963420ab5be7aab1323865f09066ae2e65d84a0fe96a6caef1049cd211ca.
+Hosted3.10–3.13 CI passed; its platform/tool skips are distinct from the strict
+union's zero-skips qualification. Some C++ helpers select c++ before clang++;
+actual CI includes coherent GNU routes plus the explicit Clang18/libstdc++13 wrapper.
 
-## Remaining release candidate
+Python shape's Gearu candidate passed190 tests; Rust shape passed108 tests,
+clippy with warnings denied, no_std and exact package checks; TypeScript passed315
+tests, typecheck and packed checks. Their original qualification records remain.
 
-Taut's existing reviewed v0.11.0 tag now has a Gearu-created GitHub Release;
-publication workflow41557714352 is running its Python3.10–3.13 matrix. Its source
-has not changed and the earlier complete strict source qualification still
-applies. No additional full native rebuild is required for unchanged source.
+PublicArtifacts.json verifies downloaded PyPI wheels/sdists against registry and
+actual CI output SHA256, npm SHA1/SHA512 integrity and gitHead, and both Rust VCS
+sources and every archive payload byte. Foundation's independent local repack
+has different compressed bytes; all12 payload entries match. Its actual CI
+archive equals the public checksum. Rust shape's31 payload entries and compressed
+archive match. These are separate claims, not a relabelled failed comparison.
 
-Rust dependency-lock preparation ca84a2238fa85bae7ed457ba788de6c647875aeb adds
-only foundation0.11.0's registry source/checksum. Gearu then prepared immutable
-local release7f2a60747901fcf15362ab3c9a8af65c20faad68/v0.11.0. From accepted
-506b60e, the only changes are that dependency lock and the three package versions
-and their own lock entries0.10.0->0.11.0. All108 tests passed, zero failed/ignored;
-clippy with warnings denied, no_std build, isolated package verification, and
-postcommit exact packaging passed against the actual registry foundation.
-No local foundation patch or copied runtime is present.
+PublicConsumers.json records fresh isolated Python/Rust/npm consumers using the
+public PyPI compiler0.11.1 and runtime owners0.11.0. Validation OFF/ON, CBOR and
+sparse JSON, frozen descriptors, shared nominal owners and mutable snapshot repair
+passed where applicable. Generated Rust compiled and ran without workspace patches;
+generated TypeScript compiled strictly and ran in Node; npm CJS/ESM owner identity
+passed. Fresh ordinary npm install succeeded after the earlier metadata lag.
 
-The original Code+Surface and State reviewers receive focused same-originator
-closure for this mechanical Rust lock/version delta before its public push.
-No source implementation or workflow redesign is proposed.
+## Immutable corrective history
 
-Both original reviewers reported GO on the exact root f2d2586/Rust7f2a607
-tuple in ReviewCode-RustPublication.md and ReviewState-RustPublication.md.
-This accepts publishing this Rust candidate through Gearu/OIDC only; all
-terminal workflows and public consumer completion gates remain required.
+Compiler0.11.0's supported-Python workflow41557714352 failed, so that PyPI version
+was never uploaded and remains intentionally absent. Its v0.11.0 tag/source is
+retained; it remains the published foundation0.11.0 source. Compiler0.11.1 corrects
+the POSIX obstruction preflight and qualifies CI tools, with unchanged canonical
+C++/Rust runtimes. No tag was moved and no existing package was republished.
+GitHub release notes now state the final corrective publication outcome.
 
-Python shape source remains accepted d33a069198c5540bfdd5b92b6ff22615d8113fa1.
-After Taut is verified on PyPI, its configured Gearu checks must test installed
-registry dependencies and build the0.11.0 candidate, then publish its existing
-source via immutable tag/GitHub Release. TypeScript79d3899/v0.11.0 remains public;
-do not republish it.
+Foundation's first bootstrap attempt failed403; no cause was inferred. After
+explicit human authorization the temporary token was supplied through non-echoing
+stdin, used for the initial workflow, then its GitHub environment secret was
+deleted. The human confirmed revocation. Do not retrieve/reuse it. Rust shape
+used its existing OIDC publisher unchanged. Final environment-secret inventory is empty.
 
-## Completion gates and preservation
+## Future Python3.15 CI only
 
-Remaining gates: Rust focused acceptance and OIDC publication; terminal-success
-Taut and Python shape PyPI workflows; actual public registry version checks;
-fresh isolated Python/Rust/npm consumers using the public PyPI compiler and
-registry runtime owners, validation OFF/ON, codecs, descriptors and shared
-nominal identity; exact user/artifact integrity; final GWZ capture/commit/push
-with all nine remote dependencies proven. No full-train completion is claimed
-until these gates finish.
+The human follow-up was: “For future runs, we probably should add3.15.” The
+implementation retains3.10,3.11,3.12,3.13 and every existing integration command,
+adding only one3.15 matrix entry to each Python publication workflow. It adds no3.14
+and no allow-failure rule. No public artifact was rebuilt or retagged for this change.
 
-The same35 artifacts are precisely stashed again for Gearu's clean Taut check,
-with unchanged before hashes and retained original stash23d45758f2a73de865dacc2ebc68e6dc9ef22ed6.
-Current reversible stash54d964b91a674fd86aeb860cf4b43c53f1dd87d0 must be restored
-and all35+five protected-file hashes rechecked at the final boundary. enum.case
-and unrelated/contract members remain unchanged.
+Future Taut HEAD is `fcfbe0cfface9241c2b68542973936a166a0c8bc`; future Python shape HEAD is
+`0488516aa1a5db94da44fdb10f12a7ec5bfd5940`. These differ from their published sources by that
+single YAML matrix line only. FinalSourceProof.json verifies the exact bytes,
+all984 immutable compiler release blobs, all nine member heads and preservation.
+
+[Python.org](https://www.python.org/downloads/release/python-3152/) and the
+[pinned official Actions manifest](https://raw.githubusercontent.com/actions/python-versions/160ca1e232997f36def6bb6e857f628222bef58a/versions-manifest.json)
+confirm stable3.15.2, including Linux24.04/26.04 x64 availability. The official
+Linux24.04 asset SHA256a945ca657bf4efeac7483c0c82381448d3b651a8d0e49be421c71fd53085cd01
+was verified before isolated use. Actual local3.15.2 checks passed1052 Python-facing
+Taut tests and all190 Python shape tests, plus fresh public-package OFF/ON generation
+and consumer execution. Python315.json and the two JUnit files record exact scope.
+The initial local harness attempt failed before collection in temporary capture
+storage; it is retained, not counted as a pass. The dedicated-/var/tmp retry passed.
+The new hosted3.15 jobs have not run: these release workflows trigger on the next
+published release, and current immutable release CI remains3.10–3.13.
+
+## Preservation and final workspace gate
+
+All35 original untracked generated/wheel artifacts match their before hashes;
+all5 protected authoring files match; enum.case5b5280ec remains an ancestor.
+All3 reversible stashes remain retained. Taut has zero tracked changes and exactly
+those35 untracked files; other members are clean. The read-only contract and four
+unrelated members retain their original heads. GWZ must preserve this accurate
+dirty-state warning rather than claim the whole workspace has no untracked files.
+
+Final gate: same original Code+Surface and State reviewers inspect only this
+completion/provenance/preservation record and the two future-CI lines. Then file
+reports verbatim, accept the exact tuple, push the two ordinary main commits and
+the GWZ root with --check-remotes proving all9 committed dependencies. No new
+implementation review, release tag, credential access or registry publication is needed.
