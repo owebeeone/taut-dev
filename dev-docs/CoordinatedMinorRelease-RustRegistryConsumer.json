@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "version": "0.11.0",
+  "modes": [
+    "off",
+    "on"
+  ],
+  "scope": "Fresh public Rust crates, no local patch; executable CBOR and nominal descriptor/validation owner identity. Generated semantics await final public compiler consumers.",
+  "commands": [
+    {
+      "args": [
+        "cargo",
+        "run",
+        "--bin",
+        "consume"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "cargo",
+        "metadata",
+        "--format-version",
+        "1"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "cargo",
+        "run",
+        "--bin",
+        "consume"
+      ],
+      "exit": 0
+    },
+    {
+      "args": [
+        "cargo",
+        "metadata",
+        "--format-version",
+        "1"
+      ],
+      "exit": 0
+    }
+  ]
+}

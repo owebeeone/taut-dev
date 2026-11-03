@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "version": "0.11.0",
+  "crates": {
+    "taut-foundation": {
+      "checksum": "63ac99ac22bb0e5e9d645bf1f49cc4ff974d82c05219f72b83c9f03cb93375ef",
+      "source_sha": "9260da45f486ed5a57aa399788c2936f2c044619",
+      "payload_files": 12,
+      "all_payload_bytes_equal_to_exact_local_package": true,
+      "local_archive_checksum": "09e917939e4edb5890f55a3e67d23653c4d9c91a1ad048eeb4eb47526c93a2f8",
+      "trusted_publisher_provenance": null
+    },
+    "taut-shape": {
+      "checksum": "51725134e5b6b6f160602c718cd6869ab3848e61cfc362a1a1933c65f77a45be",
+      "source_sha": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+      "payload_files": 31,
+      "all_payload_bytes_equal_to_exact_local_package": true,
+      "local_archive_checksum": "51725134e5b6b6f160602c718cd6869ab3848e61cfc362a1a1933c65f77a45be",
+      "trusted_publisher_provenance": {
+        "provider": "github",
+        "repository": "owebeeone/taut-shape-rs",
+        "run_id": "41558306131",
+        "sha": "7f2a60747901fcf15362ab3c9a8af65c20faad68"
+      }
+    }
+  },
+  "pypi": {}
+}
