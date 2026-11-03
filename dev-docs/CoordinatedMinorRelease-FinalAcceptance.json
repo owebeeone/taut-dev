@@ -1,0 +1,48 @@
+{
+  "status": "ACCEPTED: public release complete, future CI commits pushed, reviewed root and all9 remote dependencies verified",
+  "reviewed_root": "2b39a54a24a1b9e6c9d337b2a564d5a9c722c3e6",
+  "member_tuple": {
+    "taut": "fcfbe0cfface9241c2b68542973936a166a0c8bc",
+    "taut-shape-py": "0488516aa1a5db94da44fdb10f12a7ec5bfd5940",
+    "taut-shape-rs": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+    "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8",
+    "taut-shape": "89916c4d017123d7c16f094eb2fba6ece98facc0",
+    "glade": "491dda9645a3ef76b6c1632fbb6bddef926e40a7",
+    "glade-decl-ts": "f1b7492f3a970a8af25415356c3fb62db40c4a15",
+    "glial": "6a9a9e216629ccdd6b57aa0c66436d5fa7e0e654",
+    "grip-core": "b9d7149a1c3748ad2b4490d9d70ca23ee121268f"
+  },
+  "published_sources": {
+    "taut": "0258b49e92c8b4ccd95027b4b10ad0b2f3992c52",
+    "taut-shape-py": "d33a069198c5540bfdd5b92b6ff22615d8113fa1",
+    "taut-shape-rs": "7f2a60747901fcf15362ab3c9a8af65c20faad68",
+    "taut-shape-ts": "79d3899b91af843b2295d089c82f6547ef97fde8"
+  },
+  "reports": {
+    "Code": {
+      "file": "CoordinatedMinorRelease-ReviewCode-Final.md",
+      "sha256": "5f67c08c6db17c8161336ff0e3bc8400c2caa36123beaec2b0a17d5e3f49460b",
+      "verdict": "GO"
+    },
+    "State": {
+      "file": "CoordinatedMinorRelease-ReviewState-Final.md",
+      "sha256": "a578bc3513872225086688a934161df6ae76b56cba9a9f527fee34cf9f64611f",
+      "verdict": "GO"
+    }
+  },
+  "blocking_findings": 0,
+  "new_architectural_roots": 0,
+  "final_gate_remediation_rounds": 0,
+  "prior_remediation": "Original two nonarchitectural rounds and later corrective source acceptance remain historical; no new round was needed for this final receipt.",
+  "accepted_root_remote_proof": "CoordinatedMinorRelease-FinalRemoteProof.json",
+  "future_ci_push_proof": "CoordinatedMinorRelease-FutureCIPush.json",
+  "remote_dependencies_verified": 9,
+  "preserved_files": {
+    "untracked35": 35,
+    "protected5": 5,
+    "enum_case_ancestor": true,
+    "retained_stashes": 3
+  },
+  "receipt_publication": "This receipt-only descendant retains the accepted member tuple. Its final checked push result and exact resulting root SHA are stored in scratch/final-root-push.json and the final chat response; the committed remote proof above refers explicitly to the reviewed root, avoiding a self-referential commit hash.",
+  "hosted_python315": "Future next-release coverage; local1052+190 and public OFF/ON checks passed on3.15.2."
+}

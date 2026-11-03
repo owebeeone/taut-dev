@@ -1,5 +1,5 @@
 {
-  "status": "PUBLICATION_AND_LOCAL_CHECKS_PASS; final review/root remote proof pending",
+  "status": "ACCEPTED GO/GO: all public/local checks passed; two future CI commits and reviewed root pushed with all9 dependencies proven",
   "workflows": {
     "compiler": {
       "conclusion": "success",
@@ -1749,5 +1749,6 @@
     }
   },
   "scratch": "D:\\projects\\limbo\\coordinated-release-2026-11-03",
-  "python315_initial_attempt": "FileNotFoundError in pytest capture storage prevented collection. Failed attempt retained at python315-checks/commands.log. Retry used dedicated /var/tmp and passed; no product change was needed."
+  "python315_initial_attempt": "FileNotFoundError in pytest capture storage prevented collection. Failed attempt retained at python315-checks/commands.log. Retry used dedicated /var/tmp and passed; no product change was needed.",
+  "acceptance": "CoordinatedMinorRelease-FinalAcceptance.json"
 }

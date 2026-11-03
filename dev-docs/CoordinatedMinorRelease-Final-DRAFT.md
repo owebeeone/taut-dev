@@ -1,7 +1,9 @@
 # Final coordinated release receipt and future Python3.15 CI
 
-Status: DRAFT for the two original reviewers on the committed tuple supplied in
-their canonical prompts. No runtime implementation is changed by this object.
+Status: accepted at root2b39a54a24a1b9e6c9d337b2a564d5a9c722c3e6 and its exact member tuple after both original
+reviewers reported GO. Their reports are filed verbatim; FinalAcceptance.json
+records the merge and actual checked remote proof. No runtime implementation
+is changed by this object. The DRAFT text below preserves the reviewed intent.
 
 Authority: the original human minor-release instruction covers all four projects,
 necessary foundation publication, readiness corrections, proper dual acceptance,

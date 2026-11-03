@@ -1,8 +1,13 @@
 # Coordinated minor release completion
 
-Status: **all five intended artifacts are public, all five publication workflows
-terminated SUCCESS, and fresh public registry consumers passed**. Final receipt
-and future-CI acceptance are pending the two original reviewers and final GWZ push.
+Status: **accepted at root2b39a54a24a1b9e6c9d337b2a564d5a9c722c3e6 and its
+exact nine-member tuple after ReviewCode-Final.md and ReviewState-Final.md both
+reported GO; this accepts completed publication/evidence and the two future-CI
+additions only**. All five artifacts and workflows succeeded, public consumers
+passed, both ordinary CI commits are pushed, and the accepted root was pushed
+with all9 remote dependencies proven. FinalAcceptance.json records the verdict
+merge; FinalRemoteProof.json records that actual checked push. This receipt-only
+descendant preserves the same member tuple and is published with another checked push.
 This is the current execution record; PublicationBoundary.md describes an earlier
 partial boundary only. Historical reviews and qualifications retain their original scope.
 
@@ -92,8 +97,11 @@ those35 untracked files; other members are clean. The read-only contract and fou
 unrelated members retain their original heads. GWZ must preserve this accurate
 dirty-state warning rather than claim the whole workspace has no untracked files.
 
-Final gate: same original Code+Surface and State reviewers inspect only this
-completion/provenance/preservation record and the two future-CI lines. Then file
-reports verbatim, accept the exact tuple, push the two ordinary main commits and
-the GWZ root with --check-remotes proving all9 committed dependencies. No new
-implementation review, release tag, credential access or registry publication is needed.
+The same original Code+Surface and State reviewers independently reported GO
+with zero blocking findings. Both reports are filed verbatim. No new architectural
+root or remediation round was needed for this final object. Both ordinary main
+commits and the accepted GWZ root were pushed with --check-remotes; all9 committed
+dependencies were read and proven remotely. The final receipt-only root push
+uses the same proof mode; its exact root SHA/transport receipt is recorded in
+the final chat response and scratch/final-root-push.json. There is no remaining
+release, runtime correction, credential action or registry upload for this train.
