@@ -15,7 +15,7 @@ members:
     path: glade-decl-ts
     source_id: src_glade_decl_ts
     source_kind: git
-    commit: f1b7492f3a970a8af25415356c3fb62db40c4a15
+    commit: 15323d2d0d52236054652e9ed476d231f1e90c9c
     branch: main
     detached: false
     dirty: false
@@ -24,7 +24,7 @@ members:
     path: glial
     source_id: src_glial
     source_kind: git
-    commit: 8805abfaf8f210b2251e8ebb70811c02c06bf530
+    commit: 9d2faee7aa531f0ec5b46754b8e52b95abdf7ebd
     branch: main
     detached: false
     dirty: false
@@ -51,7 +51,7 @@ members:
     path: taut-shape
     source_id: src_taut_shape
     source_kind: git
-    commit: 4202ae26b98b6779ffbde4731d661ec978af4ca5
+    commit: 4323d20d9770fb04dcfa4cee7c5b134fada25e6b
     branch: main
     detached: false
     dirty: false
