@@ -1,0 +1,97 @@
+schema: gwz.marker/v0
+gwz_commit_id: 01a1e616-ac1b-76b4-b379-5784f1a1111c
+workspace_id: ws_default
+origin_url_hash: sha256:435d0cc7fd90ecac21881555220213cf5fac02f6a8b1fd09cc8841c66275d58c
+created_at: unix-ms:1794861608017
+created_by:
+  actor_id: unknown
+root:
+  path: .
+  before_commit: 90ca89c730b4e5cf142f29bbdee9290207fdcd5e
+  branch: main
+selected_targets:
+- '@root'
+committed_targets:
+- '@root'
+members:
+  mem_glade:
+    path: glade
+    source_id: src_glade
+    source_kind: git
+    commit: 491dda9645a3ef76b6c1632fbb6bddef926e40a7
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_glade_decl_ts:
+    path: glade-decl-ts
+    source_id: src_glade_decl_ts
+    source_kind: git
+    commit: f1b7492f3a970a8af25415356c3fb62db40c4a15
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_glial:
+    path: glial
+    source_id: src_glial
+    source_kind: git
+    commit: 8805abfaf8f210b2251e8ebb70811c02c06bf530
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_grip_core:
+    path: grip-core
+    source_id: src_grip_core
+    source_kind: git
+    commit: b9d7149a1c3748ad2b4490d9d70ca23ee121268f
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_taut:
+    path: taut
+    source_id: src_taut
+    source_kind: git
+    commit: f892c2ec580c277aceacbca60538e9655e963b19
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_taut_shape:
+    path: taut-shape
+    source_id: src_taut_shape
+    source_kind: git
+    commit: 4202ae26b98b6779ffbde4731d661ec978af4ca5
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_taut_shape_py:
+    path: taut-shape-py
+    source_id: src_taut_shape_py
+    source_kind: git
+    commit: 916578fb377ba62f6acf06cdc85fa4146dcef797
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_taut_shape_rs:
+    path: taut-shape-rs
+    source_id: src_taut_shape_rs
+    source_kind: git
+    commit: f5ca89f1d9f7faf13a59de04b96ebeaff4d17238
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true
+  mem_taut_shape_ts:
+    path: taut-shape-ts
+    source_id: src_taut_shape_ts
+    source_kind: git
+    commit: b729933da5561ddc152cdcc92b4c10e0aa701976
+    branch: main
+    detached: false
+    dirty: false
+    materialized: true

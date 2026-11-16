@@ -24,7 +24,7 @@ members:
     path: glial
     source_id: src_glial
     source_kind: git
-    commit: 6a9a9e216629ccdd6b57aa0c66436d5fa7e0e654
+    commit: 8805abfaf8f210b2251e8ebb70811c02c06bf530
     branch: main
     detached: false
     dirty: false
@@ -42,16 +42,16 @@ members:
     path: taut
     source_id: src_taut
     source_kind: git
-    commit: fcfbe0cfface9241c2b68542973936a166a0c8bc
+    commit: f892c2ec580c277aceacbca60538e9655e963b19
     branch: main
     detached: false
-    dirty: true
+    dirty: false
     materialized: true
   mem_taut_shape:
     path: taut-shape
     source_id: src_taut_shape
     source_kind: git
-    commit: 89916c4d017123d7c16f094eb2fba6ece98facc0
+    commit: 4202ae26b98b6779ffbde4731d661ec978af4ca5
     branch: main
     detached: false
     dirty: false
@@ -60,7 +60,7 @@ members:
     path: taut-shape-py
     source_id: src_taut_shape_py
     source_kind: git
-    commit: 0488516aa1a5db94da44fdb10f12a7ec5bfd5940
+    commit: 916578fb377ba62f6acf06cdc85fa4146dcef797
     branch: main
     detached: false
     dirty: false
@@ -69,7 +69,7 @@ members:
     path: taut-shape-rs
     source_id: src_taut_shape_rs
     source_kind: git
-    commit: 7f2a60747901fcf15362ab3c9a8af65c20faad68
+    commit: f5ca89f1d9f7faf13a59de04b96ebeaff4d17238
     branch: main
     detached: false
     dirty: false
@@ -78,7 +78,7 @@ members:
     path: taut-shape-ts
     source_id: src_taut_shape_ts
     source_kind: git
-    commit: 79d3899b91af843b2295d089c82f6547ef97fde8
+    commit: b729933da5561ddc152cdcc92b4c10e0aa701976
     branch: main
     detached: false
     dirty: false
